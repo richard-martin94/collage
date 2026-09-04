@@ -1,0 +1,7 @@
+﻿services:
+  collageapi:
+    image: collageapi
+    build:
+      context: .
+      dockerfile: Dockerfile
+
