@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "5EMmTnir4+c=",
+  "success": true,
+  "projectFilePath": "/home/richard/Projects/collage/collageApi/collageApi/collageApi.csproj",
+  "expectedPackageFiles": [
+    "/home/richard/.nuget/packages/microsoft.aspnetcore.openapi/10.0.11/microsoft.aspnetcore.openapi.10.0.11.nupkg.sha512",
+    "/home/richard/.nuget/packages/microsoft.dotnet.ilcompiler/10.0.11/microsoft.dotnet.ilcompiler.10.0.11.nupkg.sha512",
+    "/home/richard/.nuget/packages/microsoft.net.illink.tasks/10.0.11/microsoft.net.illink.tasks.10.0.11.nupkg.sha512",
+    "/home/richard/.nuget/packages/microsoft.openapi/2.7.5/microsoft.openapi.2.7.5.nupkg.sha512",
+    "/home/richard/.nuget/packages/scalar.aspnetcore/2.17.3/scalar.aspnetcore.2.17.3.nupkg.sha512",
+    "/home/richard/.nuget/packages/microsoft.aspnetcore.app.ref/10.0.11/microsoft.aspnetcore.app.ref.10.0.11.nupkg.sha512",
+    "/home/richard/.nuget/packages/runtime.linux-x64.microsoft.dotnet.ilcompiler/10.0.11/runtime.linux-x64.microsoft.dotnet.ilcompiler.10.0.11.nupkg.sha512"
+  ],
+  "logs": []
+}

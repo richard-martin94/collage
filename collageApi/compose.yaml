@@ -3,5 +3,5 @@
     image: collageapi
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: collageApi/Dockerfile
 
