@@ -1,3 +1,4 @@
+using System.Drawing;
 using System.Text.Json;
 using Amazon;
 using Amazon.DynamoDBv2;
@@ -6,15 +7,25 @@ using Amazon.S3;
 using Amazon.S3.Model;
 using Amazon.SQS;
 using Amazon.SQS.Model;
+using Amazon.SQS.Model.Internal.MarshallTransformations;
 using collageApi.DTOs;
 using collageApi.Endpoints;
 using collageApi.Models;
-//using collageApi.Persistence;
 using collageApi.Services;
-using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+    {
+        policy.AllowAnyOrigin()   // Allows your frontend to talk to the API
+            .AllowAnyMethod()   // Allows GET, POST, etc.
+            .AllowAnyHeader();
+    });
+});
 
 //aws config
 var awsSection = builder.Configuration.GetSection("AWS");
@@ -92,6 +103,7 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
     app.MapScalarApiReference();
+    app.UseCors(); 
 }
 
 app.UseHttpsRedirection();
@@ -128,7 +140,7 @@ app.MapPost("/photos", async (
     };
     await dynamoDb.PutItemAsync(putRequest);
 
-    // 2. Upload receipt to S3
+    // 2. Upload photo to S3
     var photoId = photo.Id;
     await using Stream photoSource = File.OpenRead("/home/richard/Projects/collage/collageApi/collageApi/Photos/testImage.jpg");
     var putObjectRequest = new PutObjectRequest
@@ -152,21 +164,58 @@ app.MapPost("/photos", async (
     return Results.Created($"/photos/{photo.Id}", photo);
 });
 
-//list all photos
-app.MapGet("/photos", async (IAmazonDynamoDB dynamoDb) =>
+//list all photos information
+app.MapGet("/photos", async (IAmazonDynamoDB dynamoDb, IAmazonS3 s3) =>
 {
     var response = await dynamoDb.ScanAsync(new ScanRequest
     {
         TableName = tableName
     });
 
-    var photo = response.Items.Select(item => new PhotoDto(
+    var photos = response.Items.Select(item => new PhotoDto(
         Id: item["PhotoId"].S,
         Key: item["Key"].S,
         Bucket: item["Bucket"].S
     ));
 
-    return Results.Ok(photo);
+    /*
+     var request = new GetObjectRequest
+        { BucketName = photos.FirstOrDefault().Bucket, Key = photos.FirstOrDefault().Id };
+
+    using var getObjectResponse = await s3.GetObjectAsync(request);
+
+    await getObjectResponse.WriteResponseStreamToFileAsync("/home/richard/Downloads/testRetrieve2.jpeg", true,
+        CancellationToken.None);
+    
+    return Results.File(getObjectResponse.ResponseStream, "image/jpeg");
+    */
+    return Results.Ok(photos);
+});
+
+app.MapGet("/photos{photoId}", async (string photoId, IAmazonDynamoDB dynamoDb, IAmazonS3 s3) =>
+{
+    var response = await dynamoDb.GetItemAsync(new GetItemRequest
+    {
+        TableName = tableName,
+        Key = new Dictionary<string, AttributeValue>
+        {
+            ["PhotoId"] = new(photoId)
+        }
+    });
+
+    if (response.Item.Count == 0)
+        return Results.NotFound(new { Message = "photo not found" });
+    
+    //return Results.Ok(response);
+
+    var request = new GetObjectRequest
+        { BucketName = response.Item["Bucket"].S, Key = response.Item["PhotoId"].S };
+
+    using var getObjectResponse = await s3.GetObjectAsync(request);
+
+    //await getObjectResponse.WriteResponseStreamToFileAsync("/home/richard/Downloads/testRetrieve2.jpeg", true, CancellationToken.None);
+    
+    return Results.File(getObjectResponse.ResponseStream, "image/jpeg");
 });
 
 //check sqs messages for debugging

@@ -10,30 +10,20 @@
     <list default="true" id="2c0ab424-864d-4591-a848-805d12906f52" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.collageApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.collageApi/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/Program.template" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/collageApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/collageApi.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/collageApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/collageApi.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/collageApi.runtimeconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/collageApi.runtimeconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/collageApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/collageApi.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.genruntimeconfig.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/ref/collageApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/ref/collageApi.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/refint/collageApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/refint/collageApi.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/rjsmrazor.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/rjsmrazor.dswa.cache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/collageApi.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/collageApi.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/collageApi.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/collageApi.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../localstack-data/state/dynamodb/ddb.sqlite-shm" beforeDir="false" afterPath="$PROJECT_DIR$/../localstack-data/state/dynamodb/ddb.sqlite-shm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../localstack-data/state/dynamodb/ddb.sqlite-wal" beforeDir="false" afterPath="$PROJECT_DIR$/../localstack-data/state/dynamodb/ddb.sqlite-wal" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +42,9 @@
     <setting file="file:///usr/share/dotnet/sdk/10.0.111/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.GenerateAssemblyInfo.targets" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "customColor": "",
   "associatedIndex": 8
