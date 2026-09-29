@@ -8,7 +8,7 @@ public static class PhotoEndpoints
 {
     public static void MapPhotoEndpoints(this IEndpointRouteBuilder routes)
     {
-        var collageApi = routes.MapGroup("api/v1/photos").WithTags("Photos");
+        var collageApi = routes.MapGroup("api/v1").WithTags("Photos");
 
         collageApi.MapPost("/", async (IPhotoService service, CreatePhotoDto command) =>
         {
@@ -18,7 +18,12 @@ public static class PhotoEndpoints
 
         });
 
-        collageApi.MapGet("/{photoId}", async (IPhotoService service, Guid photoId) =>
+        collageApi.MapGet("/photos", async (IPhotoService service) =>
+        {
+            throw new NotImplementedException();
+        });
+
+        collageApi.MapGet("/photos/{photoId}", async (IPhotoService service, Guid photoId) =>
         {/*
             var photo = await service.GetPhotoAsync(photoId);
 

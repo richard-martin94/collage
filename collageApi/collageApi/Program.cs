@@ -1,4 +1,3 @@
-using System.Drawing;
 using System.Text.Json;
 using Amazon;
 using Amazon.DynamoDBv2;
@@ -7,7 +6,6 @@ using Amazon.S3;
 using Amazon.S3.Model;
 using Amazon.SQS;
 using Amazon.SQS.Model;
-using Amazon.SQS.Model.Internal.MarshallTransformations;
 using collageApi.DTOs;
 using collageApi.Endpoints;
 using collageApi.Models;
@@ -21,8 +19,8 @@ builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(policy =>
     {
-        policy.AllowAnyOrigin()   // Allows your frontend to talk to the API
-            .AllowAnyMethod()   // Allows GET, POST, etc.
+        policy.AllowAnyOrigin()   
+            .AllowAnyMethod()   
             .AllowAnyHeader();
     });
 });
@@ -37,7 +35,7 @@ var serviceUrl = awsSection["ServiceUrl"];
 var resourcesSection = builder.Configuration.GetSection("Resources");
 var bucketName = resourcesSection["BucketName"] ?? "photo-bucket";
 var tableName = resourcesSection["TableName"] ?? "Photos";
-var queueName = resourcesSection["QueueName"] ?? "photos-events";
+var queueName = resourcesSection["QueueName"] ?? "photo-events";
 
 //S3 client registration
 builder.Services.AddSingleton<IAmazonS3>(_ =>
@@ -108,12 +106,16 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapGet("/", () => Results.Ok(new
+app.MapLocalStackAwsEndpoints(awsSection);
+//app.MapPhotoEndpoints();
+
+/* moved to endpoints: MapLocalStackAwsEndpoints
+ app.MapGet("/", () => Results.Ok(new
 {
     Status = "Running",
     Mode = useLocalStack ? "Localstack" : "AWS",
     Timestamp = DateTime.UtcNow
-}));
+}));*/
 
 app.MapPost("/photos", async (
     IAmazonDynamoDB dynamoDb,
@@ -164,8 +166,8 @@ app.MapPost("/photos", async (
     return Results.Created($"/photos/{photo.Id}", photo);
 });
 
-//list all photos information
-app.MapGet("/photos", async (IAmazonDynamoDB dynamoDb, IAmazonS3 s3) =>
+//list information for all photos in bucket
+app.MapGet("/photos", async (IAmazonDynamoDB dynamoDb) =>
 {
     var response = await dynamoDb.ScanAsync(new ScanRequest
     {
@@ -177,22 +179,12 @@ app.MapGet("/photos", async (IAmazonDynamoDB dynamoDb, IAmazonS3 s3) =>
         Key: item["Key"].S,
         Bucket: item["Bucket"].S
     ));
-
-    /*
-     var request = new GetObjectRequest
-        { BucketName = photos.FirstOrDefault().Bucket, Key = photos.FirstOrDefault().Id };
-
-    using var getObjectResponse = await s3.GetObjectAsync(request);
-
-    await getObjectResponse.WriteResponseStreamToFileAsync("/home/richard/Downloads/testRetrieve2.jpeg", true,
-        CancellationToken.None);
     
-    return Results.File(getObjectResponse.ResponseStream, "image/jpeg");
-    */
     return Results.Ok(photos);
 });
 
-app.MapGet("/photos{photoId}", async (string photoId, IAmazonDynamoDB dynamoDb, IAmazonS3 s3) =>
+//returns an image file given a photoid
+app.MapGet("/photos/{photoId}", async (string photoId, IAmazonDynamoDB dynamoDb, IAmazonS3 s3) =>
 {
     var response = await dynamoDb.GetItemAsync(new GetItemRequest
     {
@@ -218,7 +210,8 @@ app.MapGet("/photos{photoId}", async (string photoId, IAmazonDynamoDB dynamoDb, 
     return Results.File(getObjectResponse.ResponseStream, "image/jpeg");
 });
 
-//check sqs messages for debugging
+/* moved to endpoints: MapLocalStackAwsEndpoints
+        check sqs messages for debugging
 app.MapGet("/messages", async (IAmazonSQS sqs) =>
 {
     var queueUrlResponse = await sqs.GetQueueUrlAsync(queueName);
@@ -235,8 +228,6 @@ app.MapGet("/messages", async (IAmazonSQS sqs) =>
         m.Body,
         m.ReceiptHandle
     }));
-});
-
-//app.MapPhotoEndpoints();
+});*/
 
 app.Run();

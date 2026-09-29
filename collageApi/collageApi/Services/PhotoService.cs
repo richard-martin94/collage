@@ -1,3 +1,6 @@
+using Amazon.DynamoDBv2.DataModel;
+using Amazon.S3;
+using Amazon.SQS;
 using collageApi.Models;
 using collageApi.DTOs;
 using Microsoft.AspNetCore.Identity;
@@ -6,15 +9,29 @@ namespace collageApi.Services;
 
 public class PhotoService : IPhotoService
 {
-    /*private readonly CollageDbContext _collageDbContext;
+    private readonly DynamoDBContext _dynamoDbContext;
+    private readonly AmazonS3Client _s3Client;
+    private readonly AmazonSQSClient _sqsClient;
     private readonly ILogger<PhotoService> _logger;
 
-    public PhotoService(CollageDbContext collageDbContext, ILogger<PhotoService> logger)
+    public PhotoService(DynamoDBContext dynamoDbContext, AmazonS3Client s3Client, AmazonSQSClient sqsClient, ILogger<PhotoService> logger)
     {
-        _collageDbContext = collageDbContext;
+        _dynamoDbContext = dynamoDbContext;
+        _s3Client = s3Client;
+        _sqsClient = sqsClient;
         _logger = logger;
     }
 
+    public async Task<PhotoDto?> GetPhotoByIdAsync(string photoId)
+    {
+        throw new NotImplementedException();
+    }
+
+    public async Task<IEnumerable<PhotoDto>> GetAllPhotoInformationFromBucketAsync()
+    {
+        throw new NotImplementedException();
+    }
+    /*
     public async Task<PhotoDto> CreatePhotoAsync(CreatePhotoDto command)
     {
         var photo = Photo.Create(command.S3Location,command.PhotoData);

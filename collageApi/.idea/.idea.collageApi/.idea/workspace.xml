@@ -8,13 +8,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c0ab424-864d-4591-a848-805d12906f52" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/collageApi/Endpoints/LocalStackAwsEndpoints.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.collageApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.collageApi/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/Endpoints/PhotoEndpoints.cs" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/Endpoints/PhotoEndpoints.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/Program.template" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/Services/IPhotoService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/Services/IPhotoService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/Services/PhotoService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/Services/PhotoService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/collageApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/collageApi.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/collageApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/collageApi.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.sourcelink.json" afterDir="false" />
@@ -22,8 +26,6 @@
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/refint/collageApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/refint/collageApi.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/rjsmrazor.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/rjsmrazor.dswa.cache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../localstack-data/state/dynamodb/ddb.sqlite-shm" beforeDir="false" afterPath="$PROJECT_DIR$/../localstack-data/state/dynamodb/ddb.sqlite-shm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../localstack-data/state/dynamodb/ddb.sqlite-wal" beforeDir="false" afterPath="$PROJECT_DIR$/../localstack-data/state/dynamodb/ddb.sqlite-wal" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +39,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/collageApi/Endpoints/LocalStackAWSEndpoints.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/collageApi/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/collageApi/Properties/launchSettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/collageApi/Services/ILocalStackAWSService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file:///usr/share/dotnet/sdk/10.0.111/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.GenerateAssemblyInfo.targets" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
