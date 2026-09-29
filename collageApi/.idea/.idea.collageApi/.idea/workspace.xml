@@ -1,10 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;last_opened_file_path&quot;: &quot;/home/richard/Projects/collage&quot;
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakeSettings">
+    <configurations />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2c0ab424-864d-4591-a848-805d12906f52" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.collageApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.collageApi/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/AWSSDK.DynamoDBv2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/AWSSDK.DynamoDBv2.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/Microsoft.AspNetCore.OpenApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/Microsoft.AspNetCore.OpenApi.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/Microsoft.OpenApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/Microsoft.OpenApi.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/Scalar.AspNetCore.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/Scalar.AspNetCore.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/collageApi.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/collageApi.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/collageApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/collageApi.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/collageApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/collageApi.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/collageApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/collageApi.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/ref/collageApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/ref/collageApi.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/refint/collageApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/refint/collageApi.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/rjsmrazor.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/rjsmrazor.dswa.cache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/rpswa.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/rpswa.dswa.cache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/obj/collageApi.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/collageApi.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/obj/collageApi.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/collageApi.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/obj/collageApi.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/collageApi.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/rider.project.restore.info" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file:///usr/share/dotnet/sdk/10.0.111/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.GenerateAssemblyInfo.targets" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.collageApi: http.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.jetbrains.opentelemetry.toolwindow.stripe.promo": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/richard/Projects/collage",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.collageApi: http">
     <configuration name="collageApi: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/collageApi/collageApi.csproj" />
@@ -67,4 +142,18 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2c0ab424-864d-4591-a848-805d12906f52" name="Changes" comment="" />
+      <created>1790700449356</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1790700449356</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
 </project>

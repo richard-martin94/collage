@@ -8,7 +8,10 @@
       "launchUrl": "scalar/v1",
       "applicationUrl": "http://localhost:5012",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "AWS_ACCESS_KEY_ID": "test",
+        "AWS_SECRET_ACCESS_KEY": "test",
+        "AWS_REGION": "us-east-1"
       }
     }
   }

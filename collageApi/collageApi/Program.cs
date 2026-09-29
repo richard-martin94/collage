@@ -1,49 +1,195 @@
-using System.Text.Json.Serialization;
-using Microsoft.AspNetCore.Http.HttpResults;
+using System.Text.Json;
+using Amazon;
+using Amazon.DynamoDBv2;
+using Amazon.DynamoDBv2.DataModel;
+using Amazon.DynamoDBv2.Model;
+using Amazon.S3;
+using Amazon.S3.Model;
+using Amazon.SQS;
+using Amazon.SQS.Model;
+using collageApi.DTOs;
+using collageApi.Endpoints;
+using collageApi.Models;
+//using collageApi.Persistence;
+using collageApi.Services;
+using Microsoft.AspNetCore.Identity;
 using Scalar.AspNetCore;
 
-var builder = WebApplication.CreateSlimBuilder(args);
+var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.ConfigureHttpJsonOptions(options =>
+
+//aws config
+var awsSection = builder.Configuration.GetSection("AWS");
+var region = awsSection["Region"] ?? "us-east-1";
+var useLocalStack = awsSection.GetValue<bool>("UseLocalStack");
+var serviceUrl = awsSection["ServiceUrl"];
+
+//define resources
+var resourcesSection = builder.Configuration.GetSection("Resources");
+var bucketName = resourcesSection["BucketName"] ?? "photo-bucket";
+var tableName = resourcesSection["TableName"] ?? "Photos";
+var queueName = resourcesSection["QueueName"] ?? "photos-events";
+
+//S3 client registration
+builder.Services.AddSingleton<IAmazonS3>(_ =>
 {
-    options.SerializerOptions.TypeInfoResolverChain.Insert(0, AppJsonSerializerContext.Default);
+    var config = new AmazonS3Config
+    {
+        RegionEndpoint = RegionEndpoint.GetBySystemName(region)
+    };
+    if (useLocalStack && !string.IsNullOrEmpty(serviceUrl))
+    {
+        config.ServiceURL = serviceUrl;
+        config.ForcePathStyle = true; //required to work with local stack s3
+        config.UseHttp = true;
+    }
+
+    return new AmazonS3Client(config);
 });
 
+//dynamoDB client registration
+builder.Services.AddSingleton<IAmazonDynamoDB>(_ =>
+{
+    var config = new AmazonDynamoDBConfig
+    {
+        RegionEndpoint = RegionEndpoint.GetBySystemName(region)
+    };
+
+    if (useLocalStack && !string.IsNullOrEmpty(serviceUrl))
+    {
+        config.ServiceURL = serviceUrl;
+        config.UseHttp = true;
+    }
+
+    return new AmazonDynamoDBClient(config);
+});
+
+//sqs client registration
+builder.Services.AddSingleton<IAmazonSQS>(_ =>
+{
+    var config = new AmazonSQSConfig
+    {
+        RegionEndpoint = RegionEndpoint.GetBySystemName(region)
+    };
+
+    if (useLocalStack && !string.IsNullOrEmpty(serviceUrl))
+    {
+        config.ServiceURL = serviceUrl;
+        config.UseHttp = true;
+    }
+
+    return new AmazonSQSClient(config);
+});
+
+// Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
+//builder.Services.AddTransient<IPhotoService, PhotoService>();
+
 var app = builder.Build();
 
+// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
     app.MapScalarApiReference();
 }
 
-Todo[] sampleTodos =
-[
-    new(1, "Walk the dog"),
-    new(2, "Do the dishes", DateOnly.FromDateTime(DateTime.Now)),
-    new(3, "Do the laundry", DateOnly.FromDateTime(DateTime.Now.AddDays(1))),
-    new(4, "Clean the bathroom"),
-    new(5, "Clean the car", DateOnly.FromDateTime(DateTime.Now.AddDays(2)))
-];
+app.UseHttpsRedirection();
 
-var todosApi = app.MapGroup("/todos");
-todosApi.MapGet("/", () => sampleTodos)
-    .WithName("GetTodos");
+app.MapGet("/", () => Results.Ok(new
+{
+    Status = "Running",
+    Mode = useLocalStack ? "Localstack" : "AWS",
+    Timestamp = DateTime.UtcNow
+}));
 
-todosApi.MapGet("/{id}", Results<Ok<Todo>, NotFound> (int id) =>
-        sampleTodos.FirstOrDefault(a => a.Id == id) is { } todo
-            ? TypedResults.Ok(todo)
-            : TypedResults.NotFound())
-    .WithName("GetTodoById");
+app.MapPost("/photos", async (
+    IAmazonDynamoDB dynamoDb,
+    IAmazonS3 s3,
+    IAmazonSQS sqs) =>
+{
+    var photo = new PhotoDto(
+        Id: Guid.NewGuid().ToString(),
+        Key: "testImage.jpg",
+        Bucket: bucketName
+    );
+
+    // 1. Save to DynamoDB
+    var putRequest = new PutItemRequest
+    {
+        TableName = tableName,
+        Item = new Dictionary<string, AttributeValue>
+        {
+            ["PhotoId"] = new(photo.Id),
+            ["Key"] = new(photo.Key),
+            ["Bucket"] = new(photo.Bucket),
+            ["CreatedAt"] = new(DateTimeOffset.UtcNow.ToString())
+        }
+    };
+    await dynamoDb.PutItemAsync(putRequest);
+
+    // 2. Upload receipt to S3
+    var photoId = photo.Id;
+    await using Stream photoSource = File.OpenRead("/home/richard/Projects/collage/collageApi/collageApi/Photos/testImage.jpg");
+    var putObjectRequest = new PutObjectRequest
+    {
+        BucketName = bucketName,
+        Key = $"{photoId}",
+        InputStream = photoSource,
+        ContentType = "image/jpeg"
+    };
+    await s3.PutObjectAsync(putObjectRequest);
+
+    // 3. Send message to SQS
+    var queueUrlResponse = await sqs.GetQueueUrlAsync(queueName);
+    var sendMessageRequest = new SendMessageRequest
+    {
+        QueueUrl = queueUrlResponse.QueueUrl,
+        MessageBody = JsonSerializer.Serialize(photo)
+    };
+    await sqs.SendMessageAsync(sendMessageRequest);
+
+    return Results.Created($"/photos/{photo.Id}", photo);
+});
+
+//list all photos
+app.MapGet("/photos", async (IAmazonDynamoDB dynamoDb) =>
+{
+    var response = await dynamoDb.ScanAsync(new ScanRequest
+    {
+        TableName = tableName
+    });
+
+    var photos = response.Items.Select(item => new PhotoDto(
+        Id: item["PhotoId"].S,
+        Key: item["Key"].S,
+        Bucket: item["Bucket"].S
+    ));
+
+    return Results.Ok(photos);
+});
+
+//check sqs messages for debugging
+app.MapGet("/messages", async (IAmazonSQS sqs) =>
+{
+    var queueUrlResponse = await sqs.GetQueueUrlAsync(queueName);
+    var receiveResponse = await sqs.ReceiveMessageAsync(new ReceiveMessageRequest
+    {
+        QueueUrl = queueUrlResponse.QueueUrl,
+        MaxNumberOfMessages = 10,
+        WaitTimeSeconds = 1
+    });
+
+    return Results.Ok(receiveResponse.Messages.Select(m => new
+    {
+        m.MessageId,
+        m.Body,
+        m.ReceiptHandle
+    }));
+});
+
+//app.MapPhotoEndpoints();
 
 app.Run();
-
-public record Todo(int Id, string? Title, DateOnly? DueBy = null, bool IsComplete = false);
-
-[JsonSerializable(typeof(Todo[]))]
-internal partial class AppJsonSerializerContext : JsonSerializerContext
-{
-}
