@@ -62,21 +62,13 @@
               "target": "Package",
               "version": "[10.0.12, )"
             },
-            "Microsoft.DotNet.ILCompiler": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[10.0.11, )",
-              "autoReferenced": true
-            },
-            "Microsoft.NET.ILLink.Tasks": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[10.0.11, )",
-              "autoReferenced": true
-            },
             "Scalar.AspNetCore": {
               "target": "Package",
               "version": "[2.17.11, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[10.0.12, )"
             }
           },
           "imports": [
@@ -93,10 +85,6 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[10.0.11, 10.0.11]"
-            },
-            {
-              "name": "runtime.linux-x64.Microsoft.DotNet.ILCompiler",
               "version": "[10.0.11, 10.0.11]"
             }
           ],

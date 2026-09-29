@@ -12,13 +12,7 @@
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <SourceRoot Include="/home/richard/.nuget/packages/" />
   </ItemGroup>
-  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Import Project="$(NuGetPackageRoot)microsoft.net.illink.tasks/10.0.11/build/Microsoft.NET.ILLink.Tasks.props" Condition="Exists('$(NuGetPackageRoot)microsoft.net.illink.tasks/10.0.11/build/Microsoft.NET.ILLink.Tasks.props')" />
-    <Import Project="$(NuGetPackageRoot)microsoft.dotnet.ilcompiler/10.0.11/build/Microsoft.DotNet.ILCompiler.props" Condition="Exists('$(NuGetPackageRoot)microsoft.dotnet.ilcompiler/10.0.11/build/Microsoft.DotNet.ILCompiler.props')" />
-  </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgMicrosoft_NET_ILLink_Tasks Condition=" '$(PkgMicrosoft_NET_ILLink_Tasks)' == '' ">/home/richard/.nuget/packages/microsoft.net.illink.tasks/10.0.11</PkgMicrosoft_NET_ILLink_Tasks>
-    <PkgMicrosoft_DotNet_ILCompiler Condition=" '$(PkgMicrosoft_DotNet_ILCompiler)' == '' ">/home/richard/.nuget/packages/microsoft.dotnet.ilcompiler/10.0.11</PkgMicrosoft_DotNet_ILCompiler>
     <PkgAWSSDK_Core Condition=" '$(PkgAWSSDK_Core)' == '' ">/home/richard/.nuget/packages/awssdk.core/4.0.102.6</PkgAWSSDK_Core>
     <PkgAWSSDK_SQS Condition=" '$(PkgAWSSDK_SQS)' == '' ">/home/richard/.nuget/packages/awssdk.sqs/4.0.100.14</PkgAWSSDK_SQS>
     <PkgAWSSDK_S3 Condition=" '$(PkgAWSSDK_S3)' == '' ">/home/richard/.nuget/packages/awssdk.s3/4.0.103.4</PkgAWSSDK_S3>

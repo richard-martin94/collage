@@ -1,7 +1,6 @@
 using System.Text.Json;
 using Amazon;
 using Amazon.DynamoDBv2;
-using Amazon.DynamoDBv2.DataModel;
 using Amazon.DynamoDBv2.Model;
 using Amazon.S3;
 using Amazon.S3.Model;
@@ -16,7 +15,6 @@ using Microsoft.AspNetCore.Identity;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
-
 
 //aws config
 var awsSection = builder.Configuration.GetSection("AWS");
@@ -162,13 +160,13 @@ app.MapGet("/photos", async (IAmazonDynamoDB dynamoDb) =>
         TableName = tableName
     });
 
-    var photos = response.Items.Select(item => new PhotoDto(
+    var photo = response.Items.Select(item => new PhotoDto(
         Id: item["PhotoId"].S,
         Key: item["Key"].S,
         Bucket: item["Bucket"].S
     ));
 
-    return Results.Ok(photos);
+    return Results.Ok(photo);
 });
 
 //check sqs messages for debugging
