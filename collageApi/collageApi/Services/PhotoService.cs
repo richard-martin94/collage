@@ -1,8 +1,10 @@
+using System.Text.Json;
 using Amazon.DynamoDBv2;
 using Amazon.DynamoDBv2.Model;
 using Amazon.S3;
 using Amazon.S3.Model;
 using Amazon.SQS;
+using Amazon.SQS.Model;
 using collageApi.DTOs;
 
 namespace collageApi.Services;
@@ -72,6 +74,65 @@ public class PhotoService : IPhotoService
         var responseStream = getObjectResponse.ResponseStream;
 
         return responseStream;
+    }
+
+    public async Task<IEnumerable<PhotoDto>> PutPhotoAsync(IConfigurationSection resourcesSection)
+    {
+        var bucketName = resourcesSection["BucketName"] ?? "photo-bucket";
+        var tableName = resourcesSection["TableName"] ?? "Photos";
+        var queueName = resourcesSection["QueueName"] ?? "photo-events";
+
+        List<PhotoDto> photos = 
+        [
+            new PhotoDto(
+                Id: Guid.NewGuid().ToString(),
+                Key: "testImage.jpg",
+                Bucket: bucketName
+            ),
+            new PhotoDto(
+            Id: Guid.NewGuid().ToString(),
+            Key: "testImage2.jpg",
+            Bucket: bucketName
+            )
+        ];
+        
+        // 1. Save to DynamoDB
+        foreach (var photo in photos)
+        {
+            var putRequest = new PutItemRequest
+            {
+                TableName = tableName,
+                Item = new Dictionary<string, AttributeValue>
+                {
+                    ["PhotoId"] = new(photo.Id),
+                    ["Key"] = new(photo.Key),
+                    ["Bucket"] = new(photo.Bucket),
+                    ["CreatedAt"] = new(DateTimeOffset.UtcNow.ToString())
+                }
+            };
+            await _amazonDynamoDb.PutItemAsync(putRequest); 
+            // 2. Upload photo to S3
+            var photoId = photo.Id;
+            await using Stream photoSource = File.OpenRead($"/home/richard/Projects/collage/collageApi/collageApi/Photos/{photo.Key}");
+            var putObjectRequest = new PutObjectRequest
+            {
+                BucketName = bucketName,
+                Key = $"{photoId}",
+                InputStream = photoSource,
+                ContentType = "image/jpeg"
+            };
+            await _amazonS3.PutObjectAsync(putObjectRequest);
+            
+            // 3. Send message to SQS
+            var queueUrlResponse = await _amazonSqs.GetQueueUrlAsync(queueName);
+            var sendMessageRequest = new SendMessageRequest
+            {
+                QueueUrl = queueUrlResponse.QueueUrl,
+                MessageBody = JsonSerializer.Serialize(photo)
+            };
+            await _amazonSqs.SendMessageAsync(sendMessageRequest);
+        }
+        return photos;
     }
     /*
     public async Task<PhotoDto> CreatePhotoAsync(CreatePhotoDto command)

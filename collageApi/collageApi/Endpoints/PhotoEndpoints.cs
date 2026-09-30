@@ -9,11 +9,14 @@ public static class PhotoEndpoints
     {
         var collageApi = routes.MapGroup("api/v1").WithTags("Photos");
 
-        collageApi.MapPost("/photos", async (IPhotoService service, CreatePhotoDto command) =>
+        collageApi.MapPost("/photos", async (IPhotoService service) =>
         {
-            throw new NotImplementedException();
-            /*var photo = await service.CreatePhotoAsync(command);
-            return TypedResults.Created($"/api/photos/{photo.Id}", photo);*/
+            IEnumerable<PhotoDto> photos = await service.PutPhotoAsync(resourcesSection);
+            var tableName = resourcesSection["TableName"] ?? "Photos";
+            
+            return photos is null
+                ? (IResult)TypedResults.NotFound(new { Message = $"Something went wrong putting photos into {tableName}." })
+                : TypedResults.Created("", photos);
 
         });
 

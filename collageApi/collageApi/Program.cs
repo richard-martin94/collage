@@ -122,7 +122,7 @@ app.MapPost("/photos", async (
 {
     var photo = new PhotoDto(
         Id: Guid.NewGuid().ToString(),
-        Key: "testImage.jpg",
+        Key: "testImage2.jpg",
         Bucket: bucketName
     );
 
@@ -142,7 +142,7 @@ app.MapPost("/photos", async (
 
     // 2. Upload photo to S3
     var photoId = photo.Id;
-    await using Stream photoSource = File.OpenRead("/home/richard/Projects/collage/collageApi/collageApi/Photos/testImage.jpg");
+    await using Stream photoSource = File.OpenRead("/home/richard/Projects/collage/collageApi/collageApi/Photos/testImage2.jpg");
     var putObjectRequest = new PutObjectRequest
     {
         BucketName = bucketName,
