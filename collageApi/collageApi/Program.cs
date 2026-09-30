@@ -8,9 +8,7 @@ using Amazon.SQS;
 using Amazon.SQS.Model;
 using collageApi.DTOs;
 using collageApi.Endpoints;
-using collageApi.Models;
 using collageApi.Services;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -92,7 +90,7 @@ builder.Services.AddSingleton<IAmazonSQS>(_ =>
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
-//builder.Services.AddTransient<IPhotoService, PhotoService>();
+builder.Services.AddTransient<IPhotoService, PhotoService>();
 
 var app = builder.Build();
 
@@ -107,7 +105,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.MapLocalStackAwsEndpoints(awsSection);
-//app.MapPhotoEndpoints();
+app.MapPhotoEndpoints(resourcesSection);
 
 /* moved to endpoints: MapLocalStackAwsEndpoints
  app.MapGet("/", () => Results.Ok(new
@@ -166,6 +164,8 @@ app.MapPost("/photos", async (
     return Results.Created($"/photos/{photo.Id}", photo);
 });
 
+/*
+ these get requests were chopped up and moved to IPhotoService, PhotoService and PhotoEndpoints
 //list information for all photos in bucket
 app.MapGet("/photos", async (IAmazonDynamoDB dynamoDb) =>
 {
@@ -181,10 +181,10 @@ app.MapGet("/photos", async (IAmazonDynamoDB dynamoDb) =>
     ));
     
     return Results.Ok(photos);
-});
+});*/
 
 //returns an image file given a photoid
-app.MapGet("/photos/{photoId}", async (string photoId, IAmazonDynamoDB dynamoDb, IAmazonS3 s3) =>
+/*app.MapGet("/photos/{photoId}", async (string photoId, IAmazonDynamoDB dynamoDb, IAmazonS3 s3) =>
 {
     var response = await dynamoDb.GetItemAsync(new GetItemRequest
     {
@@ -208,7 +208,7 @@ app.MapGet("/photos/{photoId}", async (string photoId, IAmazonDynamoDB dynamoDb,
     //await getObjectResponse.WriteResponseStreamToFileAsync("/home/richard/Downloads/testRetrieve2.jpeg", true, CancellationToken.None);
     
     return Results.File(getObjectResponse.ResponseStream, "image/jpeg");
-});
+});*/
 
 /* moved to endpoints: MapLocalStackAwsEndpoints
         check sqs messages for debugging

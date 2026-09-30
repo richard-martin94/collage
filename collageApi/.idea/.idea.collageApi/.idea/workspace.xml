@@ -8,7 +8,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c0ab424-864d-4591-a848-805d12906f52" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/collageApi/Endpoints/LocalStackAwsEndpoints.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.collageApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.collageApi/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/Endpoints/PhotoEndpoints.cs" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/Endpoints/PhotoEndpoints.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/Program.cs" afterDir="false" />
@@ -18,7 +17,6 @@
       <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/collageApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/collageApi.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.sourcelink.json" afterDir="false" />

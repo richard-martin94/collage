@@ -1,15 +1,15 @@
-using Amazon.DynamoDBv2.DataModel;
+using Amazon.DynamoDBv2;
+using Amazon.DynamoDBv2.Model;
 using Amazon.S3;
+using Amazon.S3.Model;
 using Amazon.SQS;
-using collageApi.Models;
 using collageApi.DTOs;
-using Microsoft.AspNetCore.Identity;
 
 namespace collageApi.Services;
 
 public class PhotoService : IPhotoService
 {
-    private readonly DynamoDBContext _dynamoDbContext;
+    /*private readonly DynamoDBContext _dynamoDbContext;
     private readonly AmazonS3Client _s3Client;
     private readonly AmazonSQSClient _sqsClient;
     private readonly ILogger<PhotoService> _logger;
@@ -20,16 +20,58 @@ public class PhotoService : IPhotoService
         _s3Client = s3Client;
         _sqsClient = sqsClient;
         _logger = logger;
+    }*/
+    private readonly IAmazonS3 _amazonS3;
+    private readonly IAmazonSQS _amazonSqs;
+    private readonly IAmazonDynamoDB _amazonDynamoDb;
+
+    public PhotoService(IAmazonS3 amazonS3, IAmazonSQS amazonSqs, IAmazonDynamoDB amazonDynamoDb)
+    {
+        _amazonS3 = amazonS3;
+        _amazonSqs = amazonSqs;
+        _amazonDynamoDb = amazonDynamoDb;
     }
 
-    public async Task<PhotoDto?> GetPhotoByIdAsync(string photoId)
+    public async Task<IEnumerable<PhotoDto>> GetAllPhotoInformationFromBucketAsync(string tableName)
     {
-        throw new NotImplementedException();
-    }
+        var response = await _amazonDynamoDb.ScanAsync(new ScanRequest
+        {
+            TableName = tableName
+        });
 
-    public async Task<IEnumerable<PhotoDto>> GetAllPhotoInformationFromBucketAsync()
+        var photos = response.Items.Select(item => new PhotoDto(
+            Id: item["PhotoId"].S,
+            Key: item["Key"].S,
+            Bucket: item["Bucket"].S
+        ));
+    
+        return photos;
+    }
+    
+    public async Task<Stream> GetPhotoByIdAsync(string photoId, string tableName)
     {
-        throw new NotImplementedException();
+        var response = await _amazonDynamoDb.GetItemAsync(new GetItemRequest
+        {
+            TableName = tableName,
+            Key = new Dictionary<string, AttributeValue>
+            {
+                ["PhotoId"] = new(photoId)
+            }
+        });
+
+        if (response.Item.Count == 0)
+        {
+            return Stream.Null;
+        }
+
+        var request = new GetObjectRequest
+            { BucketName = response.Item["Bucket"].S, Key = response.Item["PhotoId"].S };
+
+        var getObjectResponse = await _amazonS3.GetObjectAsync(request);
+
+        var responseStream = getObjectResponse.ResponseStream;
+
+        return responseStream;
     }
     /*
     public async Task<PhotoDto> CreatePhotoAsync(CreatePhotoDto command)

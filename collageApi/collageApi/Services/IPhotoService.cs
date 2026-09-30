@@ -4,7 +4,6 @@ namespace collageApi.Services;
 
 public interface IPhotoService
 {
-    Task<PhotoDto?> GetPhotoByIdAsync(string photoId);
-    Task<IEnumerable<PhotoDto>> GetAllPhotoInformationFromBucketAsync();
-    
+    Task<IEnumerable<PhotoDto>> GetAllPhotoInformationFromBucketAsync(string tableName);
+    Task<Stream> GetPhotoByIdAsync(string photoId, string tableName);
 }

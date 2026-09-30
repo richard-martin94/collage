@@ -1,16 +1,15 @@
 using collageApi.DTOs;
 using collageApi.Services;
-using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace collageApi.Endpoints;
 
 public static class PhotoEndpoints
 {
-    public static void MapPhotoEndpoints(this IEndpointRouteBuilder routes)
+    public static void MapPhotoEndpoints(this IEndpointRouteBuilder routes, IConfigurationSection resourcesSection)
     {
         var collageApi = routes.MapGroup("api/v1").WithTags("Photos");
 
-        collageApi.MapPost("/", async (IPhotoService service, CreatePhotoDto command) =>
+        collageApi.MapPost("/photos", async (IPhotoService service, CreatePhotoDto command) =>
         {
             throw new NotImplementedException();
             /*var photo = await service.CreatePhotoAsync(command);
@@ -20,18 +19,23 @@ public static class PhotoEndpoints
 
         collageApi.MapGet("/photos", async (IPhotoService service) =>
         {
-            throw new NotImplementedException();
+            var tableName = resourcesSection["TableName"] ?? "Photos";
+            IEnumerable<PhotoDto> photos = await service.GetAllPhotoInformationFromBucketAsync(tableName);
+            
+            return photos is null
+                ? (IResult)TypedResults.NotFound(new { Message = $"Photos in {tableName} not found." })
+                : TypedResults.Ok(photos);
         });
 
-        collageApi.MapGet("/photos/{photoId}", async (IPhotoService service, Guid photoId) =>
-        {/*
-            var photo = await service.GetPhotoAsync(photoId);
+        collageApi.MapGet("/photos/{photoId}", async (IPhotoService service, string photoId) =>
+        {  
+            var tableName = resourcesSection["TableName"] ?? "Photos";
 
-            return photo is null
-                ? (IResult)TypedResults.NotFound(new { Message = $"photo with id {photoId} not found" })
-                : TypedResults.Ok(photo);*/
-            
-            throw new NotImplementedException();
+            var photoResponse = await service.GetPhotoByIdAsync(photoId, tableName);
+
+            return photoResponse is null 
+                ? (IResult)TypedResults.NotFound(new { Message = $"Photo with id: {photoId} not found in {tableName}." })
+                : TypedResults.File(photoResponse, "image/jpeg");
         });
 
         collageApi.MapDelete("/{photoId}", async (IPhotoService service, Guid photoId) =>
