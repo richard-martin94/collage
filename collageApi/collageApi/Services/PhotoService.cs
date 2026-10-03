@@ -96,9 +96,9 @@ public class PhotoService : IPhotoService
             )
         ];
         
-        // 1. Save to DynamoDB
         foreach (var photo in photos)
         {
+            // 1. Save to DynamoDB
             var putRequest = new PutItemRequest
             {
                 TableName = tableName,
@@ -111,6 +111,7 @@ public class PhotoService : IPhotoService
                 }
             };
             await _amazonDynamoDb.PutItemAsync(putRequest); 
+            
             // 2. Upload photo to S3
             var photoId = photo.Id;
             await using Stream photoSource = File.OpenRead($"/home/richard/Projects/collage/collageApi/collageApi/Photos/{photo.Key}");

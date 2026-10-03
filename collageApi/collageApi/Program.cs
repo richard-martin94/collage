@@ -1,12 +1,7 @@
-using System.Text.Json;
 using Amazon;
 using Amazon.DynamoDBv2;
-using Amazon.DynamoDBv2.Model;
 using Amazon.S3;
-using Amazon.S3.Model;
 using Amazon.SQS;
-using Amazon.SQS.Model;
-using collageApi.DTOs;
 using collageApi.Endpoints;
 using collageApi.Services;
 using Scalar.AspNetCore;
@@ -31,9 +26,6 @@ var serviceUrl = awsSection["ServiceUrl"];
 
 //define resources
 var resourcesSection = builder.Configuration.GetSection("Resources");
-var bucketName = resourcesSection["BucketName"] ?? "photo-bucket";
-var tableName = resourcesSection["TableName"] ?? "Photos";
-var queueName = resourcesSection["QueueName"] ?? "photo-events";
 
 //S3 client registration
 builder.Services.AddSingleton<IAmazonS3>(_ =>
@@ -107,14 +99,16 @@ app.UseHttpsRedirection();
 app.MapLocalStackAwsEndpoints(awsSection);
 app.MapPhotoEndpoints(resourcesSection);
 
-/* moved to endpoints: MapLocalStackAwsEndpoints
+/*
+ moved to endpoints: MapLocalStackAwsEndpoints
  app.MapGet("/", () => Results.Ok(new
 {
     Status = "Running",
     Mode = useLocalStack ? "Localstack" : "AWS",
     Timestamp = DateTime.UtcNow
-}));*/
-
+}));
+ 
+moved to PhotoEndPoints/PhotoService/IPhotoService
 app.MapPost("/photos", async (
     IAmazonDynamoDB dynamoDb,
     IAmazonS3 s3,
@@ -162,7 +156,7 @@ app.MapPost("/photos", async (
     await sqs.SendMessageAsync(sendMessageRequest);
 
     return Results.Created($"/photos/{photo.Id}", photo);
-});
+});*/
 
 /*
  these get requests were chopped up and moved to IPhotoService, PhotoService and PhotoEndpoints
