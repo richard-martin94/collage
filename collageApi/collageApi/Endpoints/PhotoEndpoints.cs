@@ -1,7 +1,5 @@
-using collageApi.Configuration;
 using collageApi.DTOs;
 using collageApi.Services;
-using Microsoft.Extensions.Options;
 
 namespace collageApi.Endpoints;
 
@@ -15,7 +13,6 @@ public static class PhotoEndpoints
         collageApi.MapPost("/photos", async (IPhotoService service) =>
         {
             IEnumerable<PhotoDto> photos = await service.PutPhotoAsync();
-            //var tableName = resourcesSection["TableName"] ?? "Photos";
             
             return photos is null
                 ? (IResult)TypedResults.NotFound(new { Message = $"Something went wrong with put photos request." })
@@ -24,7 +21,6 @@ public static class PhotoEndpoints
 
         collageApi.MapGet("/photos", async (IPhotoService service) =>
         {
-            //var tableName = resourcesSection["TableName"] ?? "Photos";
             IEnumerable<PhotoDto> photos = await service.GetAllPhotoInformationFromBucketAsync();
             
             return photos is null
@@ -34,8 +30,6 @@ public static class PhotoEndpoints
 
         collageApi.MapGet("/photos/{photoId}", async (IPhotoService service, string photoId) =>
         {  
-            //var tableName = resourcesSection["TableName"] ?? "Photos";
-
             var photoResponse = await service.GetPhotoByIdAsync(photoId);
 
             return photoResponse is null 
@@ -45,9 +39,6 @@ public static class PhotoEndpoints
 
         collageApi.MapDelete("/{photoId}", async (IPhotoService service, Guid photoId) =>
         {
-            /*await service.DeletePhotoAsync(photoId);
-            return TypedResults.NoContent();*/
-            
             throw new NotImplementedException();
         });
     }

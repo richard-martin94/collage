@@ -1,6 +1,5 @@
 using System.Text.Json;
 using Amazon.Runtime;
-using Amazon.S3;
 using Amazon.SQS;
 using Amazon.SQS.Model;
 using collageApi.Configuration;

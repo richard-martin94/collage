@@ -1,4 +1,3 @@
-using Amazon.DynamoDBv2;
 using Amazon.Runtime;
 using Amazon.S3;
 using Amazon.S3.Model;

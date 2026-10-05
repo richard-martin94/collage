@@ -1,6 +1,6 @@
 using collageApi.DTOs;
 
-namespace collageApi.Services.AWS.Factory;
+namespace collageApi.Services.AWS;
 
 public interface ISqsService
 {

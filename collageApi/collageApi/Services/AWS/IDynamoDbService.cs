@@ -1,5 +1,4 @@
 using Amazon.DynamoDBv2.Model;
-using collageApi.DTOs;
 
 namespace collageApi.Services.AWS;
 
