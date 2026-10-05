@@ -1,11 +1,10 @@
-using System.Text.Json;
-using Amazon.DynamoDBv2;
+using collageApi.Services.AWS;
 using Amazon.DynamoDBv2.Model;
-using Amazon.S3;
-using Amazon.S3.Model;
 using Amazon.SQS;
-using Amazon.SQS.Model;
+using collageApi.Configuration;
 using collageApi.DTOs;
+using collageApi.Services.AWS.Factory;
+using Microsoft.Extensions.Options;
 
 namespace collageApi.Services;
 
@@ -23,20 +22,34 @@ public class PhotoService : IPhotoService
         _sqsClient = sqsClient;
         _logger = logger;
     }*/
-    private readonly IAmazonS3 _amazonS3;
-    private readonly IAmazonSQS _amazonSqs;
-    private readonly IAmazonDynamoDB _amazonDynamoDb;
+    //private readonly IAmazonS3 _amazonS3;
+    //private readonly IAmazonSQS _amazonSqs;
+    //private readonly IAmazonDynamoDB _amazonDynamoDb;
+    private readonly IS3Service _s3Service;
+    private readonly ISqsService _sqsService;
+    private readonly IDynamoDbService _dynamoDb;
+    private readonly string _bucketName;
 
-    public PhotoService(IAmazonS3 amazonS3, IAmazonSQS amazonSqs, IAmazonDynamoDB amazonDynamoDb)
-    {
+    public PhotoService(IS3Service s3Service, ISqsService sqsService, IDynamoDbService dynamoDb, IOptions<AWSSettings> awsSettings)
+    {/*
         _amazonS3 = amazonS3;
         _amazonSqs = amazonSqs;
-        _amazonDynamoDb = amazonDynamoDb;
+        _amazonDynamoDb = amazonDynamoDb;*/
+        _s3Service = s3Service;
+        _sqsService = sqsService;
+        _dynamoDb = dynamoDb;
+        _bucketName = awsSettings.Value.S3BucketName;
     }
 
-    public async Task<IEnumerable<PhotoDto>> GetAllPhotoInformationFromBucketAsync(string tableName)
+    public async Task<IEnumerable<PhotoDto>> GetAllPhotoInformationFromBucketAsync()
     {
-        var response = await _amazonDynamoDb.ScanAsync(new ScanRequest
+        var responseItems = await _dynamoDb.AsyncScan();
+        var photos = responseItems.Select(item => new PhotoDto(
+            Id: item["PhotoId"].S,
+            Key: item["Key"].S,
+            Bucket: item["Bucket"].S
+        ));
+        /*var response = await _amazonDynamoDb.ScanAsync(new ScanRequest
         {
             TableName = tableName
         });
@@ -45,14 +58,15 @@ public class PhotoService : IPhotoService
             Id: item["PhotoId"].S,
             Key: item["Key"].S,
             Bucket: item["Bucket"].S
-        ));
+        ));*/
     
         return photos;
     }
     
-    public async Task<Stream> GetPhotoByIdAsync(string photoId, string tableName)
+    public async Task<Stream> GetPhotoByIdAsync(string photoId)
     {
-        var response = await _amazonDynamoDb.GetItemAsync(new GetItemRequest
+        var item = _dynamoDb.GetItemAsync(photoId).Result;
+        /*var response = await _amazonDynamoDb.GetItemAsync(new GetItemRequest
         {
             TableName = tableName,
             Key = new Dictionary<string, AttributeValue>
@@ -60,46 +74,52 @@ public class PhotoService : IPhotoService
                 ["PhotoId"] = new(photoId)
             }
         });
-
-        if (response.Item.Count == 0)
+        */
+        
+        if (item.Count == 0)
         {
             return Stream.Null;
         }
 
+        /*
         var request = new GetObjectRequest
-            { BucketName = response.Item["Bucket"].S, Key = response.Item["PhotoId"].S };
-
+            { BucketName = item["Bucket"].S, Key = item["PhotoId"].S };
+        //  { BucketName = response.Item["Bucket"].S, Key = response.Item["PhotoId"].S };
+        
         var getObjectResponse = await _amazonS3.GetObjectAsync(request);
 
         var responseStream = getObjectResponse.ResponseStream;
+        */
+        
+        var responseStream = _s3Service.GetItemAsync(photoId).Result;
 
         return responseStream;
     }
 
-    public async Task<IEnumerable<PhotoDto>> PutPhotoAsync(IConfigurationSection resourcesSection)
+    public async Task<IEnumerable<PhotoDto>> PutPhotoAsync()
     {
-        var bucketName = resourcesSection["BucketName"] ?? "photo-bucket";
-        var tableName = resourcesSection["TableName"] ?? "Photos";
-        var queueName = resourcesSection["QueueName"] ?? "photo-events";
+        //var bucketName = resourcesSection["BucketName"] ?? "photo-bucket";
+        //var tableName = resourcesSection["TableName"] ?? "Photos";
+        //var queueName = resourcesSection["QueueName"] ?? "photo-events";
 
         List<PhotoDto> photos = 
         [
-            new PhotoDto(
+            new (
                 Id: Guid.NewGuid().ToString(),
                 Key: "testImage.jpg",
-                Bucket: bucketName
+                Bucket: _bucketName
             ),
-            new PhotoDto(
+            new (
             Id: Guid.NewGuid().ToString(),
             Key: "testImage2.jpg",
-            Bucket: bucketName
+            Bucket: _bucketName
             )
         ];
         
         foreach (var photo in photos)
         {
             // 1. Save to DynamoDB
-            var putRequest = new PutItemRequest
+            /*var putRequest = new PutItemRequest
             {
                 TableName = tableName,
                 Item = new Dictionary<string, AttributeValue>
@@ -110,28 +130,39 @@ public class PhotoService : IPhotoService
                     ["CreatedAt"] = new(DateTimeOffset.UtcNow.ToString())
                 }
             };
-            await _amazonDynamoDb.PutItemAsync(putRequest); 
+            await _amazonDynamoDb.PutItemAsync(putRequest); */
+            var item = new Dictionary<string, AttributeValue>
+            {
+                ["PhotoId"] = new(photo.Id),
+                ["Key"] = new(photo.Key),
+                ["Bucket"] = new(photo.Bucket),
+                ["CreatedAt"] = new(DateTimeOffset.UtcNow.ToString())
+            };
+            await _dynamoDb.AddItemAsync(item);
             
             // 2. Upload photo to S3
-            var photoId = photo.Id;
-            await using Stream photoSource = File.OpenRead($"/home/richard/Projects/collage/collageApi/collageApi/Photos/{photo.Key}");
+            /*await using Stream photoSource = File.OpenRead($"/home/richard/Projects/collage/collageApi/collageApi/Photos/{photo.Key}");
             var putObjectRequest = new PutObjectRequest
             {
                 BucketName = bucketName,
-                Key = $"{photoId}",
+                Key = $"{photo.Id}",
                 InputStream = photoSource,
                 ContentType = "image/jpeg"
             };
-            await _amazonS3.PutObjectAsync(putObjectRequest);
+            await _amazonS3.PutObjectAsync(putObjectRequest);*/
+
+            var path = $"/home/richard/Projects/collage/collageApi/collageApi/Photos/{photo.Key}";
+            await _s3Service.PutItemAsync(photo.Id, path);
             
             // 3. Send message to SQS
-            var queueUrlResponse = await _amazonSqs.GetQueueUrlAsync(queueName);
+            /*var queueUrlResponse = await _amazonSqs.GetQueueUrlAsync(queueName);
             var sendMessageRequest = new SendMessageRequest
             {
                 QueueUrl = queueUrlResponse.QueueUrl,
                 MessageBody = JsonSerializer.Serialize(photo)
             };
-            await _amazonSqs.SendMessageAsync(sendMessageRequest);
+            await _amazonSqs.SendMessageAsync(sendMessageRequest);*/
+            await _sqsService.SendMessage(photo);
         }
         return photos;
     }

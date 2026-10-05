@@ -37,3 +37,4 @@
 /home/richard/Projects/collage/collageApi/collageApi/obj/Debug/net10.0/collageApi.pdb
 /home/richard/Projects/collage/collageApi/collageApi/obj/Debug/net10.0/collageApi.genruntimeconfig.cache
 /home/richard/Projects/collage/collageApi/collageApi/obj/Debug/net10.0/ref/collageApi.dll
+/home/richard/Projects/collage/collageApi/collageApi/bin/Debug/net10.0/AWSSDK.Extensions.NETCore.Setup.dll

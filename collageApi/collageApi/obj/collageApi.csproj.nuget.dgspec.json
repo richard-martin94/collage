@@ -48,15 +48,19 @@
           "dependencies": {
             "AWSSDK.DynamoDBv2": {
               "target": "Package",
-              "version": "[4.0.106, )"
+              "version": "[4.0.107, )"
+            },
+            "AWSSDK.Extensions.NETCore.Setup": {
+              "target": "Package",
+              "version": "[4.0.102.1, )"
             },
             "AWSSDK.S3": {
               "target": "Package",
-              "version": "[4.0.103.4, )"
+              "version": "[4.0.104.1, )"
             },
             "AWSSDK.SQS": {
               "target": "Package",
-              "version": "[4.0.100.14, )"
+              "version": "[4.0.100.15, )"
             },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
@@ -64,7 +68,7 @@
             },
             "Scalar.AspNetCore": {
               "target": "Package",
-              "version": "[2.17.11, )"
+              "version": "[2.17.13, )"
             },
             "System.Text.Json": {
               "target": "Package",

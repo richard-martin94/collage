@@ -9,11 +9,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="AWSSDK.DynamoDBv2" Version="4.0.106" />
-        <PackageReference Include="AWSSDK.S3" Version="4.0.103.4" />
-        <PackageReference Include="AWSSDK.SQS" Version="4.0.100.14" />
+        <PackageReference Include="AWSSDK.DynamoDBv2" Version="4.0.107" />
+        <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="4.0.102.1" />
+        <PackageReference Include="AWSSDK.S3" Version="4.0.104.1" />
+        <PackageReference Include="AWSSDK.SQS" Version="4.0.100.15" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.12" />
-        <PackageReference Include="Scalar.AspNetCore" Version="2.17.11" />
+        <PackageReference Include="Scalar.AspNetCore" Version="2.17.13" />
         <PackageReference Include="System.Text.Json" Version="10.0.12" />
     </ItemGroup>
 
