@@ -7,7 +7,6 @@ public static class PhotoEndpoints
 {
     public static void MapPhotoEndpoints(this IEndpointRouteBuilder routes)
     {
-        
         var collageApi = routes.MapGroup("api/v1").WithTags("Photos");
 
         collageApi.MapPost("/photos", async (IPhotoService service) =>

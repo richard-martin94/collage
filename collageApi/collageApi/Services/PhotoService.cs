@@ -2,7 +2,6 @@ using collageApi.Services.AWS;
 using Amazon.DynamoDBv2.Model;
 using collageApi.Configuration;
 using collageApi.DTOs;
-using collageApi.Services.AWS.Factory;
 using Microsoft.Extensions.Options;
 
 namespace collageApi.Services;
