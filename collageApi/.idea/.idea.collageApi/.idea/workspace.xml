@@ -8,30 +8,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c0ab424-864d-4591-a848-805d12906f52" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/collageApi/Tests/DynamoDbServiceTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collageApp/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collageApp/.idea/collageApp.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collageApp/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collageApp/src/app/Components/photo.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collageApp/src/app/Components/photo.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collageApp/src/app/Components/photo.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collageApp/src/app/Models/photo.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collageApp/src/app/Services/photo.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collageApp/src/app/api.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../collage.app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../collage.app/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../collage.app/.idea/collage.app.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../collage.app/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../collage.app/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../collage.app/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../collage.app/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../collage.app/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../collage.app/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../collage.app/src/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../collage.app/tsconfig.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.collageApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.collageApi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/Endpoints/PhotoEndpoints.cs" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/Endpoints/PhotoEndpoints.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collageApi/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/Properties/launchSettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/Services/PhotoService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/Services/PhotoService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/AWSSDK.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/AWSSDK.Core.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/AWSSDK.DynamoDBv2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/AWSSDK.DynamoDBv2.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/AWSSDK.Extensions.NETCore.Setup.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/AWSSDK.Extensions.NETCore.Setup.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/AWSSDK.S3.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/AWSSDK.S3.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/AWSSDK.SQS.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/AWSSDK.SQS.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/Microsoft.AspNetCore.OpenApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/Microsoft.AspNetCore.OpenApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/Microsoft.OpenApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/Microsoft.OpenApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/Scalar.AspNetCore.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/Scalar.AspNetCore.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/collageApi.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/collageApi.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/collageApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/collageApi.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/collageApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/collageApi.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/collageApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/collageApi.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.sourcelink.json" afterDir="false" />
@@ -39,14 +42,6 @@
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/refint/collageApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/refint/collageApi.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/rjsmrazor.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/rjsmrazor.dswa.cache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/collageApi.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/collageApi.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/collageApi.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/collageApi.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/collageApi.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/collageApi.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

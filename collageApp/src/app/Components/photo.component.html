@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+@if(isLoading())
+{
+  <div class="loading">
+    Loading photos...
+  </div>
+}
+
+<!-- Error State -->
+@if(errorMessage())
+{
+  <div class="error">
+    {{ errorMessage() }}
+  </div>
+}
+
+@if(!isLoading() && !errorMessage()){
+  <div class="photo-data-list">
+    @for (photo of photos(); track photo.id) {
+      <div class="photo">
+        <img src="{{photo.imageUrl}}">
+      </div>
+    } @empty {
+      <div class="no-results">
+        <h2>No photo data found, see error message for details.</h2>
+      </div>
+    }
+  </div>
+}
+
+
+</body>
+</html>

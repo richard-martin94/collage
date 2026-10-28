@@ -1,0 +1,27 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { API_CONFIG } from '../api.config';
+import { Photo } from '../Models/photo.model';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class PhotoService
+{
+  private apiUrl = `${API_CONFIG.baseUrl}/photos`
+
+  constructor(private http: HttpClient) {}
+
+  //GET all photo information from bucket, IE scan the bucket
+  getAllPhotoInfo(): Observable<Photo[]>
+  {
+    return this.http.get<Photo[]>(this.apiUrl);
+  }
+
+  //GET specific photo by ID
+  getPhotoById(photoId: string): Observable<Photo>{
+    return this.http.get<Photo>(`${this.apiUrl}/${photoId}`);
+  }
+
+}

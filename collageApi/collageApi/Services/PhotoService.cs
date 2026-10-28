@@ -53,14 +53,14 @@ public class PhotoService : IPhotoService
         [
             new (
                 Id: Guid.NewGuid().ToString(),
-                Key: "testImage.jpg",
+                Key: "testImage3.jpeg",
                 Bucket: _bucketName
-            ),
+            )/*,
             new (
             Id: Guid.NewGuid().ToString(),
             Key: "testImage2.jpg",
             Bucket: _bucketName
-            )
+            )*/
         ];
         
         foreach (var photo in photos)
