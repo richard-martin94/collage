@@ -27,7 +27,22 @@ public class S3Service : IS3Service
 
         return getObjectResponse.ResponseStream;
     }
-    
+
+    public async Task<string> GetPresignedUrlAsync(string key)
+    {
+        var request = new GetPreSignedUrlRequest
+        {
+            BucketName = _bucketName,
+            Key = key,
+            Verb = HttpVerb.GET,
+            Expires = DateTime.UtcNow.AddMinutes(5)
+        };
+
+        var url = await _s3Client.GetPreSignedURLAsync(request);
+        
+        return url;
+    }
+
     public async Task PutItemAsync(string photoId, string path)
     {
         try

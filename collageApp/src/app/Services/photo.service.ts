@@ -19,9 +19,10 @@ export class PhotoService
     return this.http.get<Photo[]>(this.apiUrl);
   }
 
-  //GET specific photo by ID
-  getPhotoById(photoId: string): Observable<Photo>{
-    return this.http.get<Photo>(`${this.apiUrl}/${photoId}`);
+  //get presigned url for photo
+  getPresignedUrlForPhoto(photoId: string): Observable<string>
+  {
+    return this.http.get<string>(`${this.apiUrl}/presigned/${photoId}`);
   }
 
 }

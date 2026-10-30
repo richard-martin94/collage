@@ -27,13 +27,22 @@ public static class PhotoEndpoints
                 : TypedResults.Ok(photos);
         });
 
-        collageApi.MapGet("/photos/{photoId}", async (IPhotoService service, string photoId) =>
+        /*collageApi.MapGet("/photos/{photoId}", async (IPhotoService service, string photoId) =>
         {  
             var photoResponse = await service.GetPhotoByIdAsync(photoId);
 
             return photoResponse is null 
                 ? (IResult)TypedResults.NotFound(new { Message = $"Photo with id: {photoId} not found." })
                 : TypedResults.File(photoResponse, "image/jpeg");
+        });*/
+        
+        collageApi.MapGet("/photos/presigned/{photoId}", async (IPhotoService service, string photoId) =>
+        {
+            var urlResponse = await service.GetPresignedUrl(photoId);
+            
+            return urlResponse is null
+                ? (IResult)TypedResults.NotFound(new { Message = $"Photos not found." })
+                : TypedResults.Ok(urlResponse);
         });
 
         collageApi.MapDelete("/{photoId}", async (IPhotoService service, Guid photoId) =>

@@ -1,8 +1,7 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { Photo } from '../Models/photo.model';
-import { delay } from 'rxjs';
+import { delay, switchMap, forkJoin, map } from 'rxjs';
 import { PhotoService } from '../Services/photo.service';
-import { API_CONFIG } from '../api.config';
 
 
 @Component({
@@ -16,12 +15,40 @@ export class PhotoComponent implements OnInit {
   photos = signal<Photo[]>([]);
   isLoading = signal<boolean>(false);
   errorMessage = signal<string>('');
-  private apiUrl = <string>(API_CONFIG.baseUrl);
 
   constructor(private photoService: PhotoService) {}
 
   ngOnInit() {
-    this.scanPhotos();
+    this.getPhotos();
+  }
+
+  getPhotos()
+  {
+    this.isLoading.set(true);
+    this.errorMessage.set('');
+
+    this.scanPhotos().pipe(delay(1000),
+        switchMap((photos) => {
+          if(photos.length == 0 ) return forkJoin([]);
+
+          const requests = photos.map(photo =>
+            this.photoService.getPresignedUrlForPhoto(photo.id).pipe(
+              map(presignedUrl => ({...photo, imageUrl: presignedUrl }))
+            ));
+          return forkJoin(requests);
+        })
+      ).subscribe({
+        next: (mappedPhotos) => {
+          this.photos.set(mappedPhotos);
+          this.isLoading.set(false);
+        },
+        error: (err) => {
+          this.errorMessage.set(
+            'Failed to load bucket scan info see error for more details: ' + err.message,
+          );
+          this.isLoading.set(false);
+        },
+      });
   }
 
   scanPhotos()
@@ -29,22 +56,11 @@ export class PhotoComponent implements OnInit {
     this.isLoading.set(true);
     this.errorMessage.set('');
 
-    this.photoService
-      .getAllPhotoInfo()
-      .pipe(delay(1000))
-      .subscribe({
-        next: (data) => {
-          const mappedPhotos = data.map(photo => ({
-            ...photo,
-            imageUrl: `${this.apiUrl}/photos/${photo.id}`
-          }));
-          this.photos.set(mappedPhotos);
-          this.isLoading.set(false);
-        },
-        error: (err) => {
-          this.errorMessage.set('Failed to load bucket scan info see error for more details: ' + err.message);
-          this.isLoading.set(false);
-        },
-      });
+    return this.photoService.getAllPhotoInfo().pipe(
+      map((allPhotos) => {
+        const luckyPhotos = [...allPhotos].sort(()=> 0.5 - Math.random());
+        return luckyPhotos.slice(0, 2);
+      })
+    );
   }
 }

@@ -1,5 +1,6 @@
 using collageApi.Services.AWS;
 using Amazon.DynamoDBv2.Model;
+using Amazon.S3.Model;
 using collageApi.Configuration;
 using collageApi.DTOs;
 using Microsoft.Extensions.Options;
@@ -33,7 +34,7 @@ public class PhotoService : IPhotoService
         return photos;
     }
     
-    public async Task<Stream> GetPhotoByIdAsync(string photoId)
+    /*public async Task<Stream> GetPhotoByIdAsync(string photoId)
     {
         var item = _dynamoDb.GetItemAsync(photoId).Result;
         
@@ -42,9 +43,16 @@ public class PhotoService : IPhotoService
             return Stream.Null;
         }
         
-        var responseStream = _s3Service.GetItemAsync(photoId).Result;
+        var responseStream = await _s3Service.GetItemAsync(photoId);
 
         return responseStream;
+    }*/
+
+    public async Task<string> GetPresignedUrl(string photoId)
+    {
+        var presignedUrl = await _s3Service.GetPresignedUrlAsync(photoId);
+
+        return presignedUrl;
     }
 
     public async Task<IEnumerable<PhotoDto>> PutPhotoAsync()
@@ -53,14 +61,14 @@ public class PhotoService : IPhotoService
         [
             new (
                 Id: Guid.NewGuid().ToString(),
-                Key: "testImage3.jpeg",
+                Key: "testImage.jpg",
                 Bucket: _bucketName
-            )/*,
+            ),
             new (
             Id: Guid.NewGuid().ToString(),
             Key: "testImage2.jpg",
             Bucket: _bucketName
-            )*/
+            )
         ];
         
         foreach (var photo in photos)
