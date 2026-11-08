@@ -1,3 +1,7 @@
+using System.Runtime.CompilerServices;
+using System.Security.Cryptography;
+using System.Text;
+using Amazon.SQS.Model;
 using collageApi.DTOs;
 using collageApi.Services;
 
@@ -9,14 +13,14 @@ public static class PhotoEndpoints
     {
         var collageApi = routes.MapGroup("api/v1").WithTags("Photos");
 
-        collageApi.MapPost("/photos", async (IPhotoService service) =>
+        /*collageApi.MapPost("/photos", async (IPhotoService service) =>
         {
             IEnumerable<PhotoDto> photos = await service.PutPhotoAsync();
             
             return photos is null
                 ? (IResult)TypedResults.NotFound(new { Message = $"Something went wrong with put photos request." })
                 : TypedResults.Created("", photos);
-        });
+        });*/
 
         collageApi.MapGet("/photos", async (IPhotoService service) =>
         {
@@ -36,12 +40,32 @@ public static class PhotoEndpoints
                 : TypedResults.File(photoResponse, "image/jpeg");
         });*/
         
-        collageApi.MapGet("/photos/presigned/{photoId}", async (IPhotoService service, string photoId) =>
+        collageApi.MapGet("/photos/presigned/{verb}/{photoId}", async (IPhotoService service, HttpRequest request, IConfiguration config,  string photoId, string verb) =>
         {
-            var urlResponse = await service.GetPresignedUrl(photoId);
+            if (!verb.Equals("GET") || !verb.Equals("PUT"))
+            {
+                return Results.BadRequest(new { Message = "Missing or incorrect verbs." });
+            }
+
+            if (verb.Equals("PUT"))
+            {
+                var expected = config["AdminKey"];
+                var supplied = request.Headers["X-Admin-Key"].ToString();
+
+                var ok = !string.IsNullOrEmpty(expected)
+                         && supplied.Length > 0
+                         && CryptographicOperations.FixedTimeEquals(
+                             Encoding.UTF8.GetBytes(supplied), 
+                             Encoding.UTF8.GetBytes(expected));
+
+                if (!ok)
+                    return Results.Unauthorized();
+            }
+            
+            var urlResponse = await service.GetPresignedUrl(photoId, verb);
             
             return urlResponse is null
-                ? (IResult)TypedResults.NotFound(new { Message = $"Photos not found." })
+                ? (IResult)TypedResults.NotFound(new { Message = $"Photos not found or failed to upload, see error for more details." })
                 : TypedResults.Ok(urlResponse);
         });
 

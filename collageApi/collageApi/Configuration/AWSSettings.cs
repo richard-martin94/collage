@@ -1,6 +1,6 @@
 namespace collageApi.Configuration;
 
-public class AWSSettings
+public sealed class AWSSettings
 {
     public string Region { get; set; } = string.Empty;
     public string UseLocalStack { get; set; } = string.Empty;

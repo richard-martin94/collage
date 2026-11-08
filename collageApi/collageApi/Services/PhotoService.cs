@@ -7,7 +7,7 @@ using Microsoft.Extensions.Options;
 
 namespace collageApi.Services;
 
-public class PhotoService : IPhotoService
+public sealed class PhotoService : IPhotoService
 {
     private readonly IS3Service _s3Service;
     private readonly ISqsService _sqsService;
@@ -48,14 +48,37 @@ public class PhotoService : IPhotoService
         return responseStream;
     }*/
 
-    public async Task<string> GetPresignedUrl(string photoId)
+    public async Task<string> GetPresignedUrl(string photoId, string verb)
     {
-        var presignedUrl = await _s3Service.GetPresignedUrlAsync(photoId);
-
+        var presignedUrl = "";
+        
+        if (photoId.Contains("."))
+        {
+            // 1. Save to DynamoDB
+            var item = new Dictionary<string, AttributeValue>
+            {
+                ["PhotoId"] = new(Guid.NewGuid().ToString()),
+                ["Key"] = new(photoId),
+                ["Bucket"] = new(_bucketName),
+                ["CreatedAt"] = new(DateTimeOffset.UtcNow.ToString())
+            };
+            await _dynamoDb.AddItemAsync(item);
+            
+            presignedUrl = await _s3Service.GetPresignedUrlAsync(item["PhotoId"].S, verb);
+            var photo = new PhotoDto 
+            (Id: item["PhotoId"].S, Key: photoId, Bucket: _bucketName);
+            
+            await _sqsService.SendMessage(photo);
+        }
+        else
+        {
+            presignedUrl = await _s3Service.GetPresignedUrlAsync(photoId, verb);
+        }
+        
         return presignedUrl;
     }
 
-    public async Task<IEnumerable<PhotoDto>> PutPhotoAsync()
+    /*public async Task<IEnumerable<PhotoDto>> PutPhotoAsync()
     {
         List<PhotoDto> photos = 
         [
@@ -68,6 +91,11 @@ public class PhotoService : IPhotoService
             Id: Guid.NewGuid().ToString(),
             Key: "testImage2.jpg",
             Bucket: _bucketName
+            ),
+            new (
+                Id: Guid.NewGuid().ToString(),
+                Key: "testImage3.jpg",
+                Bucket: _bucketName
             )
         ];
         
@@ -91,5 +119,5 @@ public class PhotoService : IPhotoService
             await _sqsService.SendMessage(photo);
         }
         return photos;
-    }
+    }*/
 }

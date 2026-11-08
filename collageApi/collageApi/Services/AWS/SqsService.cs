@@ -9,7 +9,7 @@ using Microsoft.Extensions.Options;
 
 namespace collageApi.Services.AWS;
 
-public class SqsService : ISqsService
+public sealed class SqsService : ISqsService
 {
     private readonly IAmazonSQS _sqsClient;
     private readonly string _queueName;

@@ -5,7 +5,7 @@ using Microsoft.Extensions.Options;
 
 namespace collageApi.Services.AWS.Factory;
 
-public class S3ClientFactory : IS3ClientFactory
+public sealed class S3ClientFactory : IS3ClientFactory
 {
     public IAmazonS3 CreateClient(IOptions<AWSSettings> awsSettings)
     {

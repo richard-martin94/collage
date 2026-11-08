@@ -5,7 +5,7 @@ using Microsoft.Extensions.Options;
 
 namespace collageApi.Services.AWS.Factory;
 
-public class DynamoDbClientFactory : IDynamoDbClientFactory
+public sealed class DynamoDbClientFactory : IDynamoDbClientFactory
 {
     public IAmazonDynamoDB CreateClient(IOptions<AWSSettings> awsSettings)
     {

@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("6ce7acd8-4865-4190-81ee-9b877960fca1")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("collageApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f6f126023611cac99099e922baa03231fb0971b9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7444ad4dd0e26137a71f382c15db150c7b4a9da8")]
 [assembly: System.Reflection.AssemblyProductAttribute("collageApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("collageApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

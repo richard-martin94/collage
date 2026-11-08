@@ -32,7 +32,7 @@ export class PhotoComponent implements OnInit {
           if(photos.length == 0 ) return forkJoin([]);
 
           const requests = photos.map(photo =>
-            this.photoService.getPresignedUrlForPhoto(photo.id).pipe(
+            this.photoService.getPresignedUrlForPhoto(photo.id, "GET").pipe(
               map(presignedUrl => ({...photo, imageUrl: presignedUrl }))
             ));
           return forkJoin(requests);

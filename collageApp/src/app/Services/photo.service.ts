@@ -20,9 +20,9 @@ export class PhotoService
   }
 
   //get presigned url for photo
-  getPresignedUrlForPhoto(photoId: string): Observable<string>
+  getPresignedUrlForPhoto(photoId: string, verb: string): Observable<string>
   {
-    return this.http.get<string>(`${this.apiUrl}/presigned/${photoId}`);
+    return this.http.get<string>(`${this.apiUrl}/presigned/${verb}/${photoId}`);
   }
 
 }

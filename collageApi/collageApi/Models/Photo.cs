@@ -1,6 +1,6 @@
 namespace collageApi.Models;
 
-public sealed class Photo
+public class Photo
 {
     public string PhotoId { get; private set; }
     public string Key { get; private set; }

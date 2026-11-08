@@ -6,7 +6,7 @@ using Microsoft.Extensions.Options;
 
 namespace collageApi.Services.AWS.Factory;
 
-public class SqsClientFactory : ISqsClientFactory
+public sealed class SqsClientFactory : ISqsClientFactory
 {
     public IAmazonSQS CreateClient(IOptions<AWSSettings> awsSettings)
     {

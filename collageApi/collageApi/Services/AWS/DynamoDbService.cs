@@ -7,7 +7,7 @@ using Microsoft.Extensions.Options;
 
 namespace collageApi.Services.AWS;
 
-public class DynamoDbService : IDynamoDbService
+public sealed class DynamoDbService : IDynamoDbService
 {
     private readonly IAmazonDynamoDB _dynamoDb;
     private readonly string _tableName;

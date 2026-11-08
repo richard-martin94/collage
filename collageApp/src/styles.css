@@ -1,1 +1,62 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+  background: #031C13;           /* page colour: set it here, not on body or wrappers */
+}
+
+body {
+  margin: 0;
+  background: transparent;
+}
+app-root {
+  display: block;
+  position: relative;
+  isolation: isolate;
+}
+
+.bgLetters {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.app-content {
+  position: relative;
+  z-index: 1;
+}
+
+.gallery-flow-huge {
+  --huge-color: #BE4E71;
+  --huge-opacity: .45;
+  position: relative;
+  width: min(95vw, calc(100svh * 3560 / 700));
+  aspect-ratio: 3560 / 700;
+  color: var(--huge-color);
+  opacity: var(--huge-opacity);
+  user-select: none;
+}
+
+.huge-letter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-inline-start: var(--x);
+  width: var(--w);
+  height: 100%;
+  fill: currentColor;
+}
+
+@media (max-width: 700px) {
+  .gallery-flow-huge {
+    width: min(95vw, calc(100svh * 2030 / 1440));
+    aspect-ratio: 2030 / 1440;
+  }
+  .huge-letter {
+    margin-inline-start: var(--mx);
+    margin-block-start: var(--my, 0%);
+    width: var(--mw);
+    height: 48.611%;
+  }
+}

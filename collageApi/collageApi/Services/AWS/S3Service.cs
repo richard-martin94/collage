@@ -7,7 +7,7 @@ using Microsoft.Extensions.Options;
 
 namespace collageApi.Services.AWS;
 
-public class S3Service : IS3Service
+public sealed class S3Service : IS3Service
 {
     private readonly IAmazonS3 _s3Client;
     private readonly string _bucketName;
@@ -28,13 +28,14 @@ public class S3Service : IS3Service
         return getObjectResponse.ResponseStream;
     }
 
-    public async Task<string> GetPresignedUrlAsync(string key)
+    public async Task<string> GetPresignedUrlAsync(string key, string verb)
     {
         var request = new GetPreSignedUrlRequest
         {
             BucketName = _bucketName,
             Key = key,
-            Verb = HttpVerb.GET,
+            Verb = verb.Equals("GET") ? HttpVerb.GET : HttpVerb.PUT,
+            ContentType = "image/jpeg",
             Expires = DateTime.UtcNow.AddMinutes(5)
         };
 
