@@ -8,44 +8,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c0ab424-864d-4591-a848-805d12906f52" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../collageApp/src/app/Components/admin.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../collageApp/src/app/Components/admin.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../collageApp/src/app/Components/admin.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collageApp/src/app/assets/testImage5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collageApp/src/app/assets/testVideo.WebM" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../collageApp/src/app/assets/testVideo.mp4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.collageApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.collageApi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/Configuration/AWSSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/Configuration/AWSSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/Endpoints/PhotoEndpoints.cs" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/Endpoints/PhotoEndpoints.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/Models/Photo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/Models/Photo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/Photos/testImage3.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/Photos/testImage3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/Services/AWS/DynamoDbService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/Services/AWS/DynamoDbService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/Services/AWS/Factory/DynamoDbClientFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/Services/AWS/Factory/DynamoDbClientFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/Services/AWS/Factory/S3ClientFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/Services/AWS/Factory/S3ClientFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/Services/AWS/Factory/SqsClientFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/Services/AWS/Factory/SqsClientFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/Services/AWS/IS3Service.cs" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/Services/AWS/IS3Service.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/Services/AWS/S3Service.cs" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/Services/AWS/S3Service.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/Services/AWS/SqsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/Services/AWS/SqsService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/Services/IPhotoService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/Services/IPhotoService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/Services/PhotoService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/Services/PhotoService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/collageApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/collageApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/collageApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/collageApi.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/collageApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/collageApi.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/ref/collageApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/ref/collageApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/refint/collageApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/refint/collageApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/rjsmrazor.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/rjsmrazor.dswa.cache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../collageApp/src/app/Components/photo.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../collageApp/src/app/Components/photo.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../collageApp/src/app/Components/photo.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../collageApp/src/app/Components/photo.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../collageApp/src/app/Services/photo.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../collageApp/src/app/Services/photo.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../collageApp/src/app/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/../collageApp/src/app/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../collageApp/src/app/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/../collageApp/src/app/app.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../collageApp/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../collageApp/src/app/app.routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../collageApp/src/app/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../collageApp/src/app/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../collageApp/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../collageApp/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../collageApp/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../collageApp/src/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,27 +63,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.collageApi: http.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "cidr.known.project.marker": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.jetbrains.opentelemetry.toolwindow.stripe.promo": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/richard/Projects/collage",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "rider.unittesting.toolwindow.stripe.button.shown": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.collageApi: http.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.jetbrains.opentelemetry.toolwindow.stripe.promo&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/richard/Projects/collage&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;rider.unittesting.toolwindow.stripe.button.shown&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.collageApi: http">
     <configuration name="collageApi: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/collageApi/collageApi.csproj" />
