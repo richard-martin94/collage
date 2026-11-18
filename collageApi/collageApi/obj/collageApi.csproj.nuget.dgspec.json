@@ -48,23 +48,23 @@
           "dependencies": {
             "AWSSDK.DynamoDBv2": {
               "target": "Package",
-              "version": "[4.0.107.3, )"
+              "version": "[4.1.0.1, )"
             },
             "AWSSDK.Extensions.NETCore.Setup": {
               "target": "Package",
-              "version": "[4.0.102.4, )"
+              "version": "[4.1.0.1, )"
             },
             "AWSSDK.S3": {
               "target": "Package",
-              "version": "[4.0.104.4, )"
+              "version": "[4.1.0.1, )"
             },
             "AWSSDK.SQS": {
               "target": "Package",
-              "version": "[4.0.100.18, )"
+              "version": "[4.1.0.1, )"
             },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[10.0.13, )"
+              "version": "[10.0.15, )"
             },
             "NSubstitute": {
               "target": "Package",
@@ -78,11 +78,11 @@
             },
             "Scalar.AspNetCore": {
               "target": "Package",
-              "version": "[2.17.14, )"
+              "version": "[3.0.1, )"
             },
             "System.Text.Json": {
               "target": "Package",
-              "version": "[10.0.13, )"
+              "version": "[10.0.15, )"
             },
             "xunit.runner.visualstudio": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -92,7 +92,7 @@
             },
             "xunit.v3": {
               "target": "Package",
-              "version": "[4.0.2, )"
+              "version": "[4.0.3, )"
             }
           },
           "imports": [

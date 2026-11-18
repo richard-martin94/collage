@@ -1,38 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
 
-</head>
-  <body>
-    <main>
-      @if(isLoading())
-      {
-        <div class="loading">
-          Loading photos...
-        </div>
-      }
+@if(isLoading())
+{
+  <div class="loading">
+    Loading photos...
+  </div>
+}
 
-      <!-- Error State -->
-      @if(errorMessage())
-      {
-        <div class="error">
-          {{ errorMessage() }}
-        </div>
-      }
-      @if(!isLoading() && !errorMessage()){
-        <div class="app-content">
-          @for (photo of photos(); track photo.id) {
-            <div class="photo">
-              <img src="{{photo.imageUrl}}">
-            </div>
-          } @empty {
-            <div class="no-results">
-              <h2>No photo data found, see error message for details.</h2>
-            </div>
-          }
-        </div>
-      }
-    </main>
-  </body>
-</html>
+<!-- Error State -->
+@if(errorMessage())
+{
+  <div class="error">
+    {{ errorMessage() }}
+  </div>
+}
+
+@if(!isLoading() && !errorMessage()){
+  <div class="galleryRow">
+    @for (photo of photos(); track photo.id)
+    {
+      <div class="galleryColumn">
+        <img alt="" src="{{photo.imageUrl}}">
+      </div>
+    }
+  </div>
+}

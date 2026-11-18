@@ -42,14 +42,14 @@ public static class PhotoEndpoints
         
         collageApi.MapGet("/photos/presigned/{verb}/{photoId}", async (IPhotoService service, HttpRequest request, IConfiguration config,  string photoId, string verb) =>
         {
-            if (!verb.Equals("GET") || !verb.Equals("PUT"))
+            if (!verb.Equals("GET") && !verb.Equals("PUT"))
             {
                 return Results.BadRequest(new { Message = "Missing or incorrect verbs." });
             }
 
             if (verb.Equals("PUT"))
             {
-                var expected = config["AdminKey"];
+                var expected = config["Admin-Key"];
                 var supplied = request.Headers["X-Admin-Key"].ToString();
 
                 var ok = !string.IsNullOrEmpty(expected)

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("collageApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7444ad4dd0e26137a71f382c15db150c7b4a9da8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2893077c1195ee2dea4ff7c01c8a4c2b83936a55")]
 [assembly: System.Reflection.AssemblyProductAttribute("collageApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("collageApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

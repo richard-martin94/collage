@@ -19,6 +19,7 @@ builder.Services.AddCors(options =>
             .AllowAnyHeader();
     });
 });
+
 var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Development";
 
 var config = new ConfigurationBuilder()

@@ -2,85 +2,102 @@
   "version": 3,
   "targets": {
     "net10.0": {
-      "AWSSDK.Core/4.0.102.11": {
+      "AWSSDK.Core/4.1.1": {
         "type": "package",
+        "dependencies": {
+          "AWSSDK.Extensions.Numerics": "[4.1.0, 5.0.0)",
+          "System.IO.Hashing": "11.0.0"
+        },
         "compile": {
-          "lib/net8.0/AWSSDK.Core.dll": {
+          "lib/net10.0/AWSSDK.Core.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/AWSSDK.Core.dll": {
+          "lib/net10.0/AWSSDK.Core.dll": {
             "related": ".xml"
           }
         }
       },
-      "AWSSDK.DynamoDBv2/4.0.107.3": {
+      "AWSSDK.DynamoDBv2/4.1.0.1": {
         "type": "package",
         "dependencies": {
-          "AWSSDK.Core": "[4.0.102.11, 5.0.0)"
+          "AWSSDK.Core": "[4.1.1, 5.0.0)"
         },
         "compile": {
-          "lib/net8.0/AWSSDK.DynamoDBv2.dll": {
+          "lib/net10.0/AWSSDK.DynamoDBv2.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/AWSSDK.DynamoDBv2.dll": {
+          "lib/net10.0/AWSSDK.DynamoDBv2.dll": {
             "related": ".xml"
           }
         }
       },
-      "AWSSDK.Extensions.NETCore.Setup/4.0.102.4": {
+      "AWSSDK.Extensions.NETCore.Setup/4.1.0.1": {
         "type": "package",
         "dependencies": {
-          "AWSSDK.Core": "4.0.102.11",
+          "AWSSDK.Core": "4.1.1",
           "Microsoft.Extensions.Configuration.Abstractions": "2.0.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "2.0.0"
         },
         "compile": {
-          "lib/net8.0/AWSSDK.Extensions.NETCore.Setup.dll": {
+          "lib/net10.0/AWSSDK.Extensions.NETCore.Setup.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/AWSSDK.Extensions.NETCore.Setup.dll": {
+          "lib/net10.0/AWSSDK.Extensions.NETCore.Setup.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net8.0/AWSSDK.Extensions.NETCore.Setup.targets": {}
+          "buildTransitive/net10.0/AWSSDK.Extensions.NETCore.Setup.targets": {}
         }
       },
-      "AWSSDK.S3/4.0.104.4": {
+      "AWSSDK.Extensions.Numerics/4.1.0": {
         "type": "package",
-        "dependencies": {
-          "AWSSDK.Core": "[4.0.102.11, 5.0.0)"
-        },
         "compile": {
-          "lib/net8.0/AWSSDK.S3.dll": {
+          "lib/net10.0/AWSSDK.Extensions.Numerics.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/AWSSDK.S3.dll": {
+          "lib/net10.0/AWSSDK.Extensions.Numerics.dll": {
             "related": ".xml"
           }
         }
       },
-      "AWSSDK.SQS/4.0.100.18": {
+      "AWSSDK.S3/4.1.0.1": {
         "type": "package",
         "dependencies": {
-          "AWSSDK.Core": "[4.0.102.11, 5.0.0)"
+          "AWSSDK.Core": "[4.1.1, 5.0.0)"
         },
         "compile": {
-          "lib/net8.0/AWSSDK.SQS.dll": {
+          "lib/net10.0/AWSSDK.S3.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/AWSSDK.SQS.dll": {
+          "lib/net10.0/AWSSDK.S3.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "AWSSDK.SQS/4.1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "AWSSDK.Core": "[4.1.1, 5.0.0)"
+        },
+        "compile": {
+          "lib/net10.0/AWSSDK.SQS.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/AWSSDK.SQS.dll": {
             "related": ".xml"
           }
         }
@@ -114,10 +131,10 @@
           }
         }
       },
-      "Microsoft.AspNetCore.OpenApi/10.0.13": {
+      "Microsoft.AspNetCore.OpenApi/10.0.15": {
         "type": "package",
         "dependencies": {
-          "Microsoft.OpenApi": "[2.12.2, 3.0.0)"
+          "Microsoft.OpenApi": "[2.13.0, 3.0.0)"
         },
         "compile": {
           "lib/net10.0/Microsoft.AspNetCore.OpenApi.dll": {
@@ -165,20 +182,20 @@
           }
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/10.0.0": {
         "type": "package",
         "compile": {
-          "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+          "lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+          "lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net6.0/_._": {}
+          "buildTransitive/net8.0/_._": {}
         }
       },
       "Microsoft.Extensions.Logging.Abstractions/2.0.0": {
@@ -207,7 +224,7 @@
           }
         }
       },
-      "Microsoft.OpenApi/2.12.2": {
+      "Microsoft.OpenApi/2.13.0": {
         "type": "package",
         "compile": {
           "lib/net8.0/Microsoft.OpenApi.dll": {
@@ -220,11 +237,11 @@
           }
         }
       },
-      "Microsoft.Testing.Extensions.Telemetry/2.5.1": {
+      "Microsoft.Testing.Extensions.Telemetry/2.5.2": {
         "type": "package",
         "dependencies": {
           "Microsoft.ApplicationInsights": "2.23.0",
-          "Microsoft.Testing.Platform": "[2.5.1, 3.0.0)"
+          "Microsoft.Testing.Platform": "[2.5.2, 3.0.0)"
         },
         "compile": {
           "lib/net9.0/Microsoft.Testing.Extensions.Telemetry.dll": {
@@ -284,10 +301,10 @@
           "buildMultiTargeting/Microsoft.Testing.Extensions.Telemetry.props": {}
         }
       },
-      "Microsoft.Testing.Extensions.TrxReport.Abstractions/2.5.1": {
+      "Microsoft.Testing.Extensions.TrxReport.Abstractions/2.5.2": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Testing.Platform": "[2.5.1, 3.0.0)"
+          "Microsoft.Testing.Platform": "[2.5.2, 3.0.0)"
         },
         "compile": {
           "lib/net9.0/Microsoft.Testing.Extensions.TrxReport.Abstractions.dll": {
@@ -300,7 +317,7 @@
           }
         }
       },
-      "Microsoft.Testing.Platform/2.5.1": {
+      "Microsoft.Testing.Platform/2.5.2": {
         "type": "package",
         "compile": {
           "lib/net9.0/Microsoft.Testing.Platform.dll": {
@@ -362,10 +379,10 @@
           "buildMultiTargeting/Microsoft.Testing.Platform.targets": {}
         }
       },
-      "Microsoft.Testing.Platform.MSBuild/2.5.1": {
+      "Microsoft.Testing.Platform.MSBuild/2.5.2": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Testing.Platform": "[2.5.1, 3.0.0)"
+          "Microsoft.Testing.Platform": "[2.5.2, 3.0.0)"
         },
         "compile": {
           "lib/net9.0/Microsoft.Testing.Extensions.MSBuild.dll": {
@@ -465,7 +482,7 @@
       "NSubstitute.Analyzers.CSharp/1.0.17": {
         "type": "package"
       },
-      "Scalar.AspNetCore/2.17.14": {
+      "Scalar.AspNetCore/3.0.1": {
         "type": "package",
         "compile": {
           "lib/net10.0/Scalar.AspNetCore.dll": {
@@ -507,6 +524,22 @@
           }
         }
       },
+      "System.IO.Hashing/11.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/System.IO.Hashing.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/System.IO.Hashing.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0/_._": {}
+        }
+      },
       "System.Security.AccessControl/6.0.1": {
         "type": "package",
         "compile": {
@@ -529,7 +562,7 @@
           }
         }
       },
-      "System.Text.Json/10.0.13": {
+      "System.Text.Json/10.0.15": {
         "type": "package",
         "compile": {
           "lib/net10.0/_._": {
@@ -545,7 +578,7 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "xunit.analyzers/2.2.0": {
+      "xunit.analyzers/2.3.0": {
         "type": "package"
       },
       "xunit.runner.visualstudio/4.0.1": {
@@ -560,10 +593,10 @@
           "build/net8.0/xunit.runner.visualstudio.props": {}
         }
       },
-      "xunit.v3/4.0.2": {
+      "xunit.v3/4.0.3": {
         "type": "package",
         "dependencies": {
-          "xunit.v3.mtp-v2": "[4.0.2]"
+          "xunit.v3.mtp-v2": "[4.0.3]"
         },
         "compile": {
           "lib/net8.0/_._": {}
@@ -572,7 +605,7 @@
           "lib/net8.0/_._": {}
         }
       },
-      "xunit.v3.assert/4.0.2": {
+      "xunit.v3.assert/4.0.3": {
         "type": "package",
         "compile": {
           "lib/net8.0/xunit.v3.assert.dll": {
@@ -585,7 +618,7 @@
           }
         }
       },
-      "xunit.v3.common/4.0.2": {
+      "xunit.v3.common/4.0.3": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "6.0.0"
@@ -601,15 +634,15 @@
           }
         }
       },
-      "xunit.v3.core.mtp-v2/4.0.2": {
+      "xunit.v3.core.mtp-v2/4.0.3": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Testing.Extensions.Telemetry": "2.5.1",
-          "Microsoft.Testing.Extensions.TrxReport.Abstractions": "2.5.1",
-          "Microsoft.Testing.Platform": "2.5.1",
-          "Microsoft.Testing.Platform.MSBuild": "2.5.1",
-          "xunit.v3.extensibility.core": "[4.0.2]",
-          "xunit.v3.runner.inproc.console": "[4.0.2]"
+          "Microsoft.Testing.Extensions.Telemetry": "2.5.2",
+          "Microsoft.Testing.Extensions.TrxReport.Abstractions": "2.5.2",
+          "Microsoft.Testing.Platform": "2.5.2",
+          "Microsoft.Testing.Platform.MSBuild": "2.5.2",
+          "xunit.v3.extensibility.core": "[4.0.3]",
+          "xunit.v3.runner.inproc.console": "[4.0.3]"
         },
         "compile": {
           "lib/net8.0/xunit.v3.mtp-v2.dll": {}
@@ -622,10 +655,10 @@
           "buildTransitive/xunit.v3.core.mtp-v2.targets": {}
         }
       },
-      "xunit.v3.extensibility.core/4.0.2": {
+      "xunit.v3.extensibility.core/4.0.3": {
         "type": "package",
         "dependencies": {
-          "xunit.v3.common": "[4.0.2]"
+          "xunit.v3.common": "[4.0.3]"
         },
         "compile": {
           "lib/netstandard2.0/xunit.v3.core.dll": {
@@ -638,12 +671,12 @@
           }
         }
       },
-      "xunit.v3.mtp-v2/4.0.2": {
+      "xunit.v3.mtp-v2/4.0.3": {
         "type": "package",
         "dependencies": {
-          "xunit.analyzers": "2.2.0",
-          "xunit.v3.assert": "[4.0.2]",
-          "xunit.v3.core.mtp-v2": "[4.0.2]"
+          "xunit.analyzers": "2.3.0",
+          "xunit.v3.assert": "[4.0.3]",
+          "xunit.v3.core.mtp-v2": "[4.0.3]"
         },
         "compile": {
           "lib/net8.0/_._": {}
@@ -652,12 +685,12 @@
           "lib/net8.0/_._": {}
         }
       },
-      "xunit.v3.runner.common/4.0.2": {
+      "xunit.v3.runner.common/4.0.3": {
         "type": "package",
         "dependencies": {
           "Microsoft.Win32.Registry": "[5.0.0]",
           "System.Security.AccessControl": "[6.0.1]",
-          "xunit.v3.common": "[4.0.2]"
+          "xunit.v3.common": "[4.0.3]"
         },
         "compile": {
           "lib/netstandard2.0/xunit.v3.runner.common.dll": {
@@ -670,11 +703,11 @@
           }
         }
       },
-      "xunit.v3.runner.inproc.console/4.0.2": {
+      "xunit.v3.runner.inproc.console/4.0.3": {
         "type": "package",
         "dependencies": {
-          "xunit.v3.extensibility.core": "[4.0.2]",
-          "xunit.v3.runner.common": "[4.0.2]"
+          "xunit.v3.extensibility.core": "[4.0.3]",
+          "xunit.v3.runner.common": "[4.0.3]"
         },
         "compile": {
           "lib/net8.0/xunit.v3.runner.inproc.console.dll": {
@@ -690,121 +723,157 @@
     }
   },
   "libraries": {
-    "AWSSDK.Core/4.0.102.11": {
-      "sha512": "K9PP9/qHQ7pqSB0lYwStJrpXQ8P1xc7Fbn3CyPg8EX78p4+yz8dhIiwiRc3aVbVrUZxmPAPRvmZm+ey1euIXGg==",
+    "AWSSDK.Core/4.1.1": {
+      "sha512": "MGURtuvtalMXUaRKCTJv4f3XrwLTcZgrIGfthnOt1Qqol6rTtNKoF0ZusQc12+Z7V9e/UsarZ7AXhh8vMIm76A==",
       "type": "package",
-      "path": "awssdk.core/4.0.102.11",
-      "hasTools": true,
+      "path": "awssdk.core/4.1.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "awssdk.core.4.0.102.11.nupkg.sha512",
+        "analyzers/dotnet/cs/AWSSDK.Core.CodeAnalysis.dll",
+        "analyzers/dotnet/cs/SharedAnalysisCode.dll",
+        "awssdk.core.4.1.1.nupkg.sha512",
         "awssdk.core.nuspec",
         "images/AWSLogo.png",
+        "lib/net10.0/AWSSDK.Core.dll",
+        "lib/net10.0/AWSSDK.Core.xml",
+        "lib/net11.0/AWSSDK.Core.dll",
+        "lib/net11.0/AWSSDK.Core.xml",
         "lib/net472/AWSSDK.Core.dll",
         "lib/net472/AWSSDK.Core.xml",
         "lib/net8.0/AWSSDK.Core.dll",
         "lib/net8.0/AWSSDK.Core.xml",
-        "lib/netcoreapp3.1/AWSSDK.Core.dll",
-        "lib/netcoreapp3.1/AWSSDK.Core.xml",
         "lib/netstandard2.0/AWSSDK.Core.dll",
-        "lib/netstandard2.0/AWSSDK.Core.xml",
-        "tools/account-management.ps1"
+        "lib/netstandard2.0/AWSSDK.Core.xml"
       ]
     },
-    "AWSSDK.DynamoDBv2/4.0.107.3": {
-      "sha512": "YDESEbXKSmuIR6wnNBdKGuEJ28Lte/O/qiQQvGdmdP5dM0Es75hD9hDLiDHvLIZUOgQoEWRc2CcpyFIWMJIOEw==",
+    "AWSSDK.DynamoDBv2/4.1.0.1": {
+      "sha512": "XhVcunhVnCH8v8SL1tjg+aBkso/yeeCjvZEaH/1nHtBvCcalhEhUFQMY/GdctN+mHRDq1SHkUaNtJ7HH+Rznlg==",
       "type": "package",
-      "path": "awssdk.dynamodbv2/4.0.107.3",
+      "path": "awssdk.dynamodbv2/4.1.0.1",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "analyzers/dotnet/cs/AWSSDK.DynamoDBv2.CodeAnalysis.dll",
         "analyzers/dotnet/cs/SharedAnalysisCode.dll",
-        "awssdk.dynamodbv2.4.0.107.3.nupkg.sha512",
+        "awssdk.dynamodbv2.4.1.0.1.nupkg.sha512",
         "awssdk.dynamodbv2.nuspec",
         "images/AWSLogo.png",
+        "lib/net10.0/AWSSDK.DynamoDBv2.dll",
+        "lib/net10.0/AWSSDK.DynamoDBv2.xml",
+        "lib/net11.0/AWSSDK.DynamoDBv2.dll",
+        "lib/net11.0/AWSSDK.DynamoDBv2.xml",
         "lib/net472/AWSSDK.DynamoDBv2.dll",
         "lib/net472/AWSSDK.DynamoDBv2.xml",
         "lib/net8.0/AWSSDK.DynamoDBv2.dll",
         "lib/net8.0/AWSSDK.DynamoDBv2.xml",
-        "lib/netcoreapp3.1/AWSSDK.DynamoDBv2.dll",
-        "lib/netcoreapp3.1/AWSSDK.DynamoDBv2.xml",
         "lib/netstandard2.0/AWSSDK.DynamoDBv2.dll",
         "lib/netstandard2.0/AWSSDK.DynamoDBv2.xml",
+        "nuget-readme.md",
         "tools/install.ps1",
         "tools/uninstall.ps1"
       ]
     },
-    "AWSSDK.Extensions.NETCore.Setup/4.0.102.4": {
-      "sha512": "5At3wgEcNrFY0KlX06ewsuyJiiWfdze4xjWs+K814lCISjeNPNUXj8FyEAEYSKkfuR71gajmSt5TXmWCA+V3NQ==",
+    "AWSSDK.Extensions.NETCore.Setup/4.1.0.1": {
+      "sha512": "YVSTtcsnIeR6zQGLdFwMBVR6P7gyrX/V6D3tHagPsci5Y+1hpqxKa1wQ7FU75JoJOBBsAw5D0RqQw2lhnV2pwg==",
       "type": "package",
-      "path": "awssdk.extensions.netcore.setup/4.0.102.4",
+      "path": "awssdk.extensions.netcore.setup/4.1.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ConfigurationSchema.json",
-        "awssdk.extensions.netcore.setup.4.0.102.4.nupkg.sha512",
+        "awssdk.extensions.netcore.setup.4.1.0.1.nupkg.sha512",
         "awssdk.extensions.netcore.setup.nuspec",
+        "buildTransitive/net10.0/AWSSDK.Extensions.NETCore.Setup.targets",
+        "buildTransitive/net11.0/AWSSDK.Extensions.NETCore.Setup.targets",
         "buildTransitive/net8.0/AWSSDK.Extensions.NETCore.Setup.targets",
-        "buildTransitive/netcoreapp3.1/AWSSDK.Extensions.NETCore.Setup.targets",
         "buildTransitive/netstandard2.0/AWSSDK.Extensions.NETCore.Setup.targets",
         "images/AWSLogo.png",
+        "lib/net10.0/AWSSDK.Extensions.NETCore.Setup.dll",
+        "lib/net10.0/AWSSDK.Extensions.NETCore.Setup.xml",
+        "lib/net11.0/AWSSDK.Extensions.NETCore.Setup.dll",
+        "lib/net11.0/AWSSDK.Extensions.NETCore.Setup.xml",
         "lib/net8.0/AWSSDK.Extensions.NETCore.Setup.dll",
         "lib/net8.0/AWSSDK.Extensions.NETCore.Setup.xml",
-        "lib/netcoreapp3.1/AWSSDK.Extensions.NETCore.Setup.dll",
-        "lib/netcoreapp3.1/AWSSDK.Extensions.NETCore.Setup.xml",
         "lib/netstandard2.0/AWSSDK.Extensions.NETCore.Setup.dll",
         "lib/netstandard2.0/AWSSDK.Extensions.NETCore.Setup.xml"
       ]
     },
-    "AWSSDK.S3/4.0.104.4": {
-      "sha512": "Qi+NicEv1md8Vxm6c40zf5pRsQ9DzPm4UwewjxSk4zbHpdzAMZK8bDZJGdp4Za9/vHP8GTbSdnDuseZQ5h9tmw==",
+    "AWSSDK.Extensions.Numerics/4.1.0": {
+      "sha512": "hhoiXT1aUyVgIiQbQoqG3L1EEneqXDh2GKyH5izUlO6Rzi9GAAi8S6mlLiVwow23+EGg77zHjdmUi+ia3RSUTg==",
       "type": "package",
-      "path": "awssdk.s3/4.0.104.4",
+      "path": "awssdk.extensions.numerics/4.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "awssdk.extensions.numerics.4.1.0.nupkg.sha512",
+        "awssdk.extensions.numerics.nuspec",
+        "images/AWSLogo.png",
+        "lib/net10.0/AWSSDK.Extensions.Numerics.dll",
+        "lib/net10.0/AWSSDK.Extensions.Numerics.xml",
+        "lib/net11.0/AWSSDK.Extensions.Numerics.dll",
+        "lib/net11.0/AWSSDK.Extensions.Numerics.xml",
+        "lib/net472/AWSSDK.Extensions.Numerics.dll",
+        "lib/net472/AWSSDK.Extensions.Numerics.xml",
+        "lib/net8.0/AWSSDK.Extensions.Numerics.dll",
+        "lib/net8.0/AWSSDK.Extensions.Numerics.xml",
+        "lib/netstandard2.0/AWSSDK.Extensions.Numerics.dll",
+        "lib/netstandard2.0/AWSSDK.Extensions.Numerics.xml"
+      ]
+    },
+    "AWSSDK.S3/4.1.0.1": {
+      "sha512": "ZgNjIc7GwxRvkKbbZVjzEm7Q2H5ZDCAWxsryGahq1/xF292U4UTUEwoiqsSAAPG2kvfmejI1cuVj3VMkKnXJKg==",
+      "type": "package",
+      "path": "awssdk.s3/4.1.0.1",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "analyzers/dotnet/cs/AWSSDK.S3.CodeAnalysis.dll",
         "analyzers/dotnet/cs/SharedAnalysisCode.dll",
-        "awssdk.s3.4.0.104.4.nupkg.sha512",
+        "awssdk.s3.4.1.0.1.nupkg.sha512",
         "awssdk.s3.nuspec",
         "images/AWSLogo.png",
+        "lib/net10.0/AWSSDK.S3.dll",
+        "lib/net10.0/AWSSDK.S3.xml",
+        "lib/net11.0/AWSSDK.S3.dll",
+        "lib/net11.0/AWSSDK.S3.xml",
         "lib/net472/AWSSDK.S3.dll",
         "lib/net472/AWSSDK.S3.xml",
         "lib/net8.0/AWSSDK.S3.dll",
         "lib/net8.0/AWSSDK.S3.xml",
-        "lib/netcoreapp3.1/AWSSDK.S3.dll",
-        "lib/netcoreapp3.1/AWSSDK.S3.xml",
         "lib/netstandard2.0/AWSSDK.S3.dll",
         "lib/netstandard2.0/AWSSDK.S3.xml",
         "tools/install.ps1",
         "tools/uninstall.ps1"
       ]
     },
-    "AWSSDK.SQS/4.0.100.18": {
-      "sha512": "u5EcK7Ng17PNHj750wc5jY83Weixiu97kJ3eOuV8pCHfvP0G+84mdY6MOxunY9KHbx3A2i5tLaKlM8DCAwBITA==",
+    "AWSSDK.SQS/4.1.0.1": {
+      "sha512": "1q78JdhtLOZyOX8n/OjarHR7jlCY9FkS6bsrszTcSQLWN+xc7VV46/kOvaeJc+LI67nWx6xZ1XZ0xwlhI/+MTQ==",
       "type": "package",
-      "path": "awssdk.sqs/4.0.100.18",
+      "path": "awssdk.sqs/4.1.0.1",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "analyzers/dotnet/cs/AWSSDK.SQS.CodeAnalysis.dll",
         "analyzers/dotnet/cs/SharedAnalysisCode.dll",
-        "awssdk.sqs.4.0.100.18.nupkg.sha512",
+        "awssdk.sqs.4.1.0.1.nupkg.sha512",
         "awssdk.sqs.nuspec",
         "images/AWSLogo.png",
+        "lib/net10.0/AWSSDK.SQS.dll",
+        "lib/net10.0/AWSSDK.SQS.xml",
+        "lib/net11.0/AWSSDK.SQS.dll",
+        "lib/net11.0/AWSSDK.SQS.xml",
         "lib/net472/AWSSDK.SQS.dll",
         "lib/net472/AWSSDK.SQS.xml",
         "lib/net8.0/AWSSDK.SQS.dll",
         "lib/net8.0/AWSSDK.SQS.xml",
-        "lib/netcoreapp3.1/AWSSDK.SQS.dll",
-        "lib/netcoreapp3.1/AWSSDK.SQS.xml",
         "lib/netstandard2.0/AWSSDK.SQS.dll",
         "lib/netstandard2.0/AWSSDK.SQS.xml",
+        "nuget-readme.md",
         "tools/install.ps1",
         "tools/uninstall.ps1"
       ]
@@ -854,10 +923,10 @@
         "microsoft.applicationinsights.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.OpenApi/10.0.13": {
-      "sha512": "XVuqUBGjVUVyb4DXR5BrSkrW0Br7sYKq39f723ILhQLlFHCyhAgWe1PkJBc42R/5mKBIgHiKVSY+PN5/4XtcQw==",
+    "Microsoft.AspNetCore.OpenApi/10.0.15": {
+      "sha512": "pptFDPMWyPDDtt68s/HsvLYeHJ0WQtntjyve6ztp/5MrLOEzdZvafYIyWSeErtexIGaB8XGYCnnUK8T/Vn4MwQ==",
       "type": "package",
-      "path": "microsoft.aspnetcore.openapi/10.0.13",
+      "path": "microsoft.aspnetcore.openapi/10.0.15",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -868,7 +937,7 @@
         "build/Microsoft.AspNetCore.OpenApi.targets",
         "lib/net10.0/Microsoft.AspNetCore.OpenApi.dll",
         "lib/net10.0/Microsoft.AspNetCore.OpenApi.xml",
-        "microsoft.aspnetcore.openapi.10.0.13.nupkg.sha512",
+        "microsoft.aspnetcore.openapi.10.0.15.nupkg.sha512",
         "microsoft.aspnetcore.openapi.nuspec"
       ]
     },
@@ -906,34 +975,33 @@
         "microsoft.extensions.configuration.abstractions.nuspec"
       ]
     },
-    "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0": {
-      "sha512": "cjWrLkJXK0rs4zofsK4bSdg+jhDLTaxrkXu4gS6Y7MAlCvRyNNgwY/lJi5RDlQOnSZweHqoyvgvbdvQsRIW+hg==",
+    "Microsoft.Extensions.DependencyInjection.Abstractions/10.0.0": {
+      "sha512": "L3AdmZ1WOK4XXT5YFPEwyt0ep6l8lGIPs7F5OOBZc77Zqeo01Of7XXICy47628sdVl0v/owxYJTe86DTgFwKCA==",
       "type": "package",
-      "path": "microsoft.extensions.dependencyinjection.abstractions/8.0.0",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/10.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "LICENSE.TXT",
         "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
         "buildTransitive/net461/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
         "buildTransitive/net462/_._",
-        "buildTransitive/net6.0/_._",
+        "buildTransitive/net8.0/_._",
         "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
+        "lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
         "lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
-        "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "lib/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
-        "lib/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
         "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.10.0.0.nupkg.sha512",
         "microsoft.extensions.dependencyinjection.abstractions.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -964,10 +1032,10 @@
         "microsoft.extensions.primitives.nuspec"
       ]
     },
-    "Microsoft.OpenApi/2.12.2": {
-      "sha512": "ZkT7qiJe0Kj0+DTZOZo+xrDy1kNmdsWFQVPIQLNx9ZJ0T9cB2LG7r+Bi60so8/+yg1nkS7QCPadrzsTG4VPKrA==",
+    "Microsoft.OpenApi/2.13.0": {
+      "sha512": "wavlgBYnn7uU/ZGhFHNl0UlDOlwz+6KRduKkqdCCbfxxANaQ1rmBpETVGdwXanAM6twQOxsvI3CBEGF4OScbeQ==",
       "type": "package",
-      "path": "microsoft.openapi/2.12.2",
+      "path": "microsoft.openapi/2.13.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -978,14 +1046,14 @@
         "lib/netstandard2.0/Microsoft.OpenApi.dll",
         "lib/netstandard2.0/Microsoft.OpenApi.pdb",
         "lib/netstandard2.0/Microsoft.OpenApi.xml",
-        "microsoft.openapi.2.12.2.nupkg.sha512",
+        "microsoft.openapi.2.13.0.nupkg.sha512",
         "microsoft.openapi.nuspec"
       ]
     },
-    "Microsoft.Testing.Extensions.Telemetry/2.5.1": {
-      "sha512": "mu2iyoHovwl0q1mGeeRU0h8+LALXC7HqbxniLa1shTKYdJGl+KPoCEgjWIQ8MLzk1tlTGPOfg1JsxdH3RxhMCA==",
+    "Microsoft.Testing.Extensions.Telemetry/2.5.2": {
+      "sha512": "j1XGKCBrmfNm0tmotMa05GlqVtb2cW5UaMkKCFHPyyFHz5rdOy7TD0SVXnZJ+QMrjPAHjRoRqn5qcsUjICSWwg==",
       "type": "package",
-      "path": "microsoft.testing.extensions.telemetry/2.5.1",
+      "path": "microsoft.testing.extensions.telemetry/2.5.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1046,14 +1114,14 @@
         "lib/netstandard2.0/tr/Microsoft.Testing.Extensions.Telemetry.resources.dll",
         "lib/netstandard2.0/zh-Hans/Microsoft.Testing.Extensions.Telemetry.resources.dll",
         "lib/netstandard2.0/zh-Hant/Microsoft.Testing.Extensions.Telemetry.resources.dll",
-        "microsoft.testing.extensions.telemetry.2.5.1.nupkg.sha512",
+        "microsoft.testing.extensions.telemetry.2.5.2.nupkg.sha512",
         "microsoft.testing.extensions.telemetry.nuspec"
       ]
     },
-    "Microsoft.Testing.Extensions.TrxReport.Abstractions/2.5.1": {
-      "sha512": "DYTZAguaHz0wNJdHDTTGYOXtnlDoLoIbTMDKSApNNcytm55DJcnwpwELfQGLk5DB5QlgaEjNhnGo1Pu5QvL5VA==",
+    "Microsoft.Testing.Extensions.TrxReport.Abstractions/2.5.2": {
+      "sha512": "+xTIaIU9H44GxOyjrfieMSZnxltGvleA3jCRtdEAzlXKb85pMmVYMLUv2JS8KwD+U2wQHUgvy5YfQfWoPEfVdQ==",
       "type": "package",
-      "path": "microsoft.testing.extensions.trxreport.abstractions/2.5.1",
+      "path": "microsoft.testing.extensions.trxreport.abstractions/2.5.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1068,14 +1136,14 @@
         "lib/netstandard2.0/Microsoft.Testing.Extensions.TrxReport.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Testing.Extensions.TrxReport.Abstractions.pdb",
         "lib/netstandard2.0/Microsoft.Testing.Extensions.TrxReport.Abstractions.xml",
-        "microsoft.testing.extensions.trxreport.abstractions.2.5.1.nupkg.sha512",
+        "microsoft.testing.extensions.trxreport.abstractions.2.5.2.nupkg.sha512",
         "microsoft.testing.extensions.trxreport.abstractions.nuspec"
       ]
     },
-    "Microsoft.Testing.Platform/2.5.1": {
-      "sha512": "FAMaFFWnULW+hDHMb40Qzhcgz9cAU2/EtgRCBNX/DdQoKo0sPG2EiY+w7bQdl/BgHnf/DbpXLbf5Xy0o15M8NA==",
+    "Microsoft.Testing.Platform/2.5.2": {
+      "sha512": "ocX0rgGY78dKfmZlZe4hB0/dvlh7wJgUAWS+KfwrqxB9DpNsjshnne9dppCKnFNEOkX4QYsrdUU++NInFPiCBw==",
       "type": "package",
-      "path": "microsoft.testing.platform/2.5.1",
+      "path": "microsoft.testing.platform/2.5.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1143,14 +1211,14 @@
         "lib/netstandard2.0/tr/Microsoft.Testing.Platform.resources.dll",
         "lib/netstandard2.0/zh-Hans/Microsoft.Testing.Platform.resources.dll",
         "lib/netstandard2.0/zh-Hant/Microsoft.Testing.Platform.resources.dll",
-        "microsoft.testing.platform.2.5.1.nupkg.sha512",
+        "microsoft.testing.platform.2.5.2.nupkg.sha512",
         "microsoft.testing.platform.nuspec"
       ]
     },
-    "Microsoft.Testing.Platform.MSBuild/2.5.1": {
-      "sha512": "lYawcAwY+h76rQmpma2n0HaL8zkOFbbKapso0Eb+uOAUQn7333pIByLftEuiO67csAoZufHNMwi6PqhNemWQXA==",
+    "Microsoft.Testing.Platform.MSBuild/2.5.2": {
+      "sha512": "Jey2v0hd7WHHa7pr6MRNKtA07FvxcOMTCtIhTI7uBZ/qR5m1mgCVCo5L1rtVAtqgMhGA205bUwq9+is4LiCzpw==",
       "type": "package",
-      "path": "microsoft.testing.platform.msbuild/2.5.1",
+      "path": "microsoft.testing.platform.msbuild/2.5.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1247,7 +1315,7 @@
         "lib/netstandard2.0/tr/Microsoft.Testing.Extensions.MSBuild.resources.dll",
         "lib/netstandard2.0/zh-Hans/Microsoft.Testing.Extensions.MSBuild.resources.dll",
         "lib/netstandard2.0/zh-Hant/Microsoft.Testing.Extensions.MSBuild.resources.dll",
-        "microsoft.testing.platform.msbuild.2.5.1.nupkg.sha512",
+        "microsoft.testing.platform.msbuild.2.5.2.nupkg.sha512",
         "microsoft.testing.platform.msbuild.nuspec"
       ]
     },
@@ -1329,10 +1397,10 @@
         "tools/uninstall.ps1"
       ]
     },
-    "Scalar.AspNetCore/2.17.14": {
-      "sha512": "wkZQbMQPSgU1w9BciBCe2Gh7l8hI9mSe+B1FRGC6zbPE2cD7YH3BDxwKWGzlJwuXAxgbfzK4UzQTnTDIgP6XFw==",
+    "Scalar.AspNetCore/3.0.1": {
+      "sha512": "J4NMGYFbz8mB+tvC8HSp5q7VUami7BnqSmY4IMGQvqJX0WhbsXfwmJA5F0iRzVmz/VmYPAZKvsgMHUUz8/j76Q==",
       "type": "package",
-      "path": "scalar.aspnetcore/2.17.14",
+      "path": "scalar.aspnetcore/3.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1340,11 +1408,9 @@
         "icon.png",
         "lib/net10.0/Scalar.AspNetCore.dll",
         "lib/net10.0/Scalar.AspNetCore.xml",
-        "lib/net8.0/Scalar.AspNetCore.dll",
-        "lib/net8.0/Scalar.AspNetCore.xml",
-        "lib/net9.0/Scalar.AspNetCore.dll",
-        "lib/net9.0/Scalar.AspNetCore.xml",
-        "scalar.aspnetcore.2.17.14.nupkg.sha512",
+        "lib/net11.0/Scalar.AspNetCore.dll",
+        "lib/net11.0/Scalar.AspNetCore.xml",
+        "scalar.aspnetcore.3.0.1.nupkg.sha512",
         "scalar.aspnetcore.nuspec"
       ]
     },
@@ -1379,6 +1445,33 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "System.IO.Hashing/11.0.0": {
+      "sha512": "U+Bv2qCYt6eONi+arSP0QIp4uTO6os6uceBsqiAwruZ+Wo2HrRhO/0tj38M9URJtS+4DhAtT3ka2TGNFYsnhyQ==",
+      "type": "package",
+      "path": "system.io.hashing/11.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net10.0/_._",
+        "buildTransitive/net461/System.IO.Hashing.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/netcoreapp2.0/System.IO.Hashing.targets",
+        "lib/net10.0/System.IO.Hashing.dll",
+        "lib/net10.0/System.IO.Hashing.xml",
+        "lib/net11.0/System.IO.Hashing.dll",
+        "lib/net11.0/System.IO.Hashing.xml",
+        "lib/net462/System.IO.Hashing.dll",
+        "lib/net462/System.IO.Hashing.xml",
+        "lib/netstandard2.0/System.IO.Hashing.dll",
+        "lib/netstandard2.0/System.IO.Hashing.xml",
+        "system.io.hashing.11.0.0.nupkg.sha512",
+        "system.io.hashing.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "System.Security.AccessControl/6.0.1": {
       "sha512": "IQ4NXP/B3Ayzvw0rDQzVTYsCKyy0Jp9KI6aYcK7UnGVlR9+Awz++TIPCQtPYfLJfOpm8ajowMR09V7quD3sEHw==",
       "type": "package",
@@ -1408,10 +1501,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Text.Json/10.0.13": {
-      "sha512": "IjBLCOgNyv48I7G69EWDUalJ0mVHyZdiH1drbPrNsQRJssvjmGVn0Q/CoZSG1RGUCCCgpdiQbZI4i9Z6Q5jnWQ==",
+    "System.Text.Json/10.0.15": {
+      "sha512": "KUTJbYaWXRanRCxW46HMH/UnBpLuerq+xrnfWOep0JpUzPRfYdZ4X0DoMOFEkoZQUeFusPdVFLf92L8Agq+3Zg==",
       "type": "package",
-      "path": "system.text.json/10.0.13",
+      "path": "system.text.json/10.0.15",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1475,15 +1568,15 @@
         "lib/net9.0/System.Text.Json.xml",
         "lib/netstandard2.0/System.Text.Json.dll",
         "lib/netstandard2.0/System.Text.Json.xml",
-        "system.text.json.10.0.13.nupkg.sha512",
+        "system.text.json.10.0.15.nupkg.sha512",
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
-    "xunit.analyzers/2.2.0": {
-      "sha512": "dXMIIztipcAyL3a19gtUrih/RLrE33/4VJdICoinYqIXXo1KLtsMPsaQ9dO2pE8xajDguwE2kqVbBqE5/EoJ0Q==",
+    "xunit.analyzers/2.3.0": {
+      "sha512": "FcuLqoNBgQA4MmQXOdNWsDnlw+LBysWUcWOql6MCTXXFJZPn+qjbxHA9F9KBRiPH0Y97MLr1VE6LxdH8MgKUoQ==",
       "type": "package",
-      "path": "xunit.analyzers/2.2.0",
+      "path": "xunit.analyzers/2.3.0",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -1494,7 +1587,7 @@
         "analyzers/dotnet/cs/xunit.analyzers.fixes.dll",
         "tools/install.ps1",
         "tools/uninstall.ps1",
-        "xunit.analyzers.2.2.0.nupkg.sha512",
+        "xunit.analyzers.2.3.0.nupkg.sha512",
         "xunit.analyzers.nuspec"
       ]
     },
@@ -1519,10 +1612,10 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
-    "xunit.v3/4.0.2": {
-      "sha512": "TdjM2OAx7w/0E88E6PgaigLoTbQaxbSR3HF/8p92plchTjf29jPHW27ylvEOz+Nx8CvPwWKGQlOR1fDv6/Qh5A==",
+    "xunit.v3/4.0.3": {
+      "sha512": "GxBopTuV5aU7NS0iE1P6I6YCQscIAP0iIyyZqZhs1c8Ry3cdiOouEtQQpX8cA7E1gEnKGRMNA+7NlhBy13AEyg==",
       "type": "package",
-      "path": "xunit.v3/4.0.2",
+      "path": "xunit.v3/4.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1530,14 +1623,14 @@
         "_content/logo-128-transparent.png",
         "lib/net472/_._",
         "lib/net8.0/_._",
-        "xunit.v3.4.0.2.nupkg.sha512",
+        "xunit.v3.4.0.3.nupkg.sha512",
         "xunit.v3.nuspec"
       ]
     },
-    "xunit.v3.assert/4.0.2": {
-      "sha512": "5PKRexYlvufWFdXenRcRGKqvaJBBZFJZpqUGlUs9p13eKEgVdOrLpkPknjzUvLY5kEUicK9871DIUDcCPA6AXA==",
+    "xunit.v3.assert/4.0.3": {
+      "sha512": "RrlWQ3yXla+ud9JBWDIY9GnUS/DS44r3ObqqV7wdWt1GhS+SveCe0MBDL238VXYoV2mWnX/DhO2LdTq5FTlT7g==",
       "type": "package",
-      "path": "xunit.v3.assert/4.0.2",
+      "path": "xunit.v3.assert/4.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1547,14 +1640,14 @@
         "lib/net8.0/xunit.v3.assert.xml",
         "lib/netstandard2.0/xunit.v3.assert.dll",
         "lib/netstandard2.0/xunit.v3.assert.xml",
-        "xunit.v3.assert.4.0.2.nupkg.sha512",
+        "xunit.v3.assert.4.0.3.nupkg.sha512",
         "xunit.v3.assert.nuspec"
       ]
     },
-    "xunit.v3.common/4.0.2": {
-      "sha512": "++CtT8daIf6qfieQev/8V88U3zViIDWou5cj+oWps1/Hf73UoaY/L0hKyi3v7Zlt3BmbU0pUc73zCB1GiB4nYA==",
+    "xunit.v3.common/4.0.3": {
+      "sha512": "+2qGz3rcveIxzbXeZVHU8dhMyaawt01mgm/zv1FJH2FPcvJpfTUqc1vQ3hK2V5zVt8QEDddA+B6fkf9/LWf/Pg==",
       "type": "package",
-      "path": "xunit.v3.common/4.0.2",
+      "path": "xunit.v3.common/4.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1562,14 +1655,14 @@
         "_content/logo-128-transparent.png",
         "lib/netstandard2.0/xunit.v3.common.dll",
         "lib/netstandard2.0/xunit.v3.common.xml",
-        "xunit.v3.common.4.0.2.nupkg.sha512",
+        "xunit.v3.common.4.0.3.nupkg.sha512",
         "xunit.v3.common.nuspec"
       ]
     },
-    "xunit.v3.core.mtp-v2/4.0.2": {
-      "sha512": "XyPMcQRsnUQLhmBBRRgYWsuPc8TyiANzcXtqfzyWfDpPuyh3Q0K4oWozZYQKZRNGnqJ97ifD6qUDWhsEEe32uw==",
+    "xunit.v3.core.mtp-v2/4.0.3": {
+      "sha512": "CsmxEanMln1chMExl6TUjnH5kF0XUDb/SqWKXqnGD8UjpkZARAXi8JDtsUYdxuROcIIdwEfs3iHZeHmTeA8DUA==",
       "type": "package",
-      "path": "xunit.v3.core.mtp-v2/4.0.2",
+      "path": "xunit.v3.core.mtp-v2/4.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1591,14 +1684,14 @@
         "buildTransitive/xunit.v3.core.mtp-v2.targets",
         "lib/net472/xunit.v3.mtp-v2.dll",
         "lib/net8.0/xunit.v3.mtp-v2.dll",
-        "xunit.v3.core.mtp-v2.4.0.2.nupkg.sha512",
+        "xunit.v3.core.mtp-v2.4.0.3.nupkg.sha512",
         "xunit.v3.core.mtp-v2.nuspec"
       ]
     },
-    "xunit.v3.extensibility.core/4.0.2": {
-      "sha512": "ARTt+pGyd86mdtiFBkKpyBQvRC3u0rr8oidBlII2GsAg7D6TfOsDFCsoQtFij83V5pE57m3whUIqT4xjiARXbQ==",
+    "xunit.v3.extensibility.core/4.0.3": {
+      "sha512": "TBYqQKyT+XBDLSHjG6PnmQpooqatflBcWvNiESVS5ptQxWXVf/FGlkUfkNyHKRCUDSCxxHIJNgwO+SRosUmZEw==",
       "type": "package",
-      "path": "xunit.v3.extensibility.core/4.0.2",
+      "path": "xunit.v3.extensibility.core/4.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1606,14 +1699,14 @@
         "_content/logo-128-transparent.png",
         "lib/netstandard2.0/xunit.v3.core.dll",
         "lib/netstandard2.0/xunit.v3.core.xml",
-        "xunit.v3.extensibility.core.4.0.2.nupkg.sha512",
+        "xunit.v3.extensibility.core.4.0.3.nupkg.sha512",
         "xunit.v3.extensibility.core.nuspec"
       ]
     },
-    "xunit.v3.mtp-v2/4.0.2": {
-      "sha512": "XLV32FhkuvheBStvX0DvjfPEtI+4SOVcIhnlTS+549r8VfVwsjpWdkJtQmQ7D23PA+Zoaqo+sTjBkRSkidC6Tw==",
+    "xunit.v3.mtp-v2/4.0.3": {
+      "sha512": "lad1hGmodKkfp3AgIwHVVIYeA9GfW125tnkYj7HvOyiwbDH8gpMKPPhzHRC1wc0w4a+0UsOHx2Ero/DtLXvtqA==",
       "type": "package",
-      "path": "xunit.v3.mtp-v2/4.0.2",
+      "path": "xunit.v3.mtp-v2/4.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1621,14 +1714,14 @@
         "_content/logo-128-transparent.png",
         "lib/net472/_._",
         "lib/net8.0/_._",
-        "xunit.v3.mtp-v2.4.0.2.nupkg.sha512",
+        "xunit.v3.mtp-v2.4.0.3.nupkg.sha512",
         "xunit.v3.mtp-v2.nuspec"
       ]
     },
-    "xunit.v3.runner.common/4.0.2": {
-      "sha512": "YlYKVhTJVcwEgJ6rm59Pjf71lQqKwKxEHqVRxWUuwrwm/nxB/mNFP/lP4vlntDO3GclNnLT9BjYOpJH9gViGQg==",
+    "xunit.v3.runner.common/4.0.3": {
+      "sha512": "J/kkhBgJg3wu1xI8gY2Esm3oRE47gNrGmKpT/XZDPOzZ3/F33yTK/ZH1CM6qDpAHoTT3GY/JgrVbS4T1JEKYiQ==",
       "type": "package",
-      "path": "xunit.v3.runner.common/4.0.2",
+      "path": "xunit.v3.runner.common/4.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1636,14 +1729,14 @@
         "_content/logo-128-transparent.png",
         "lib/netstandard2.0/xunit.v3.runner.common.dll",
         "lib/netstandard2.0/xunit.v3.runner.common.xml",
-        "xunit.v3.runner.common.4.0.2.nupkg.sha512",
+        "xunit.v3.runner.common.4.0.3.nupkg.sha512",
         "xunit.v3.runner.common.nuspec"
       ]
     },
-    "xunit.v3.runner.inproc.console/4.0.2": {
-      "sha512": "cg4XNpCN4Ry9nswutknpreN3ckSUBwtjMRmEQSNK/sIKPo6KN5tDGGGCaHDm5HGA4yFVVtTJX65tLCsZArUNfQ==",
+    "xunit.v3.runner.inproc.console/4.0.3": {
+      "sha512": "lDvNs5exa8rBdWXX/wdapPTp81SNCvUarXC5iXzr1qvO168+Sx/Ytrk9VSLbSD3Y9KNK8PcOjMl1q7JfCoo3LQ==",
       "type": "package",
-      "path": "xunit.v3.runner.inproc.console/4.0.2",
+      "path": "xunit.v3.runner.inproc.console/4.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1653,24 +1746,24 @@
         "lib/net472/xunit.v3.runner.inproc.console.xml",
         "lib/net8.0/xunit.v3.runner.inproc.console.dll",
         "lib/net8.0/xunit.v3.runner.inproc.console.xml",
-        "xunit.v3.runner.inproc.console.4.0.2.nupkg.sha512",
+        "xunit.v3.runner.inproc.console.4.0.3.nupkg.sha512",
         "xunit.v3.runner.inproc.console.nuspec"
       ]
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
-      "AWSSDK.DynamoDBv2 >= 4.0.107.3",
-      "AWSSDK.Extensions.NETCore.Setup >= 4.0.102.4",
-      "AWSSDK.S3 >= 4.0.104.4",
-      "AWSSDK.SQS >= 4.0.100.18",
-      "Microsoft.AspNetCore.OpenApi >= 10.0.13",
+      "AWSSDK.DynamoDBv2 >= 4.1.0.1",
+      "AWSSDK.Extensions.NETCore.Setup >= 4.1.0.1",
+      "AWSSDK.S3 >= 4.1.0.1",
+      "AWSSDK.SQS >= 4.1.0.1",
+      "Microsoft.AspNetCore.OpenApi >= 10.0.15",
       "NSubstitute >= 6.2.0",
       "NSubstitute.Analyzers.CSharp >= 1.0.17",
-      "Scalar.AspNetCore >= 2.17.14",
-      "System.Text.Json >= 10.0.13",
+      "Scalar.AspNetCore >= 3.0.1",
+      "System.Text.Json >= 10.0.15",
       "xunit.runner.visualstudio >= 4.0.1",
-      "xunit.v3 >= 4.0.2"
+      "xunit.v3 >= 4.0.3"
     ]
   },
   "packageFolders": {
@@ -1720,23 +1813,23 @@
         "dependencies": {
           "AWSSDK.DynamoDBv2": {
             "target": "Package",
-            "version": "[4.0.107.3, )"
+            "version": "[4.1.0.1, )"
           },
           "AWSSDK.Extensions.NETCore.Setup": {
             "target": "Package",
-            "version": "[4.0.102.4, )"
+            "version": "[4.1.0.1, )"
           },
           "AWSSDK.S3": {
             "target": "Package",
-            "version": "[4.0.104.4, )"
+            "version": "[4.1.0.1, )"
           },
           "AWSSDK.SQS": {
             "target": "Package",
-            "version": "[4.0.100.18, )"
+            "version": "[4.1.0.1, )"
           },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
-            "version": "[10.0.13, )"
+            "version": "[10.0.15, )"
           },
           "NSubstitute": {
             "target": "Package",
@@ -1750,11 +1843,11 @@
           },
           "Scalar.AspNetCore": {
             "target": "Package",
-            "version": "[2.17.14, )"
+            "version": "[3.0.1, )"
           },
           "System.Text.Json": {
             "target": "Package",
-            "version": "[10.0.13, )"
+            "version": "[10.0.15, )"
           },
           "xunit.runner.visualstudio": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -1764,7 +1857,7 @@
           },
           "xunit.v3": {
             "target": "Package",
-            "version": "[4.0.2, )"
+            "version": "[4.0.3, )"
           }
         },
         "imports": [

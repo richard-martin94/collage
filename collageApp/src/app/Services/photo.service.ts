@@ -16,13 +16,19 @@ export class PhotoService
   //GET all photo information from bucket, IE scan the bucket
   getAllPhotoInfo(): Observable<Photo[]>
   {
-    return this.http.get<Photo[]>(this.apiUrl);
+    return this.http.get<Photo []>(this.apiUrl);
   }
 
   //get presigned url for photo
-  getPresignedUrlForPhoto(photoId: string, verb: string): Observable<string>
+  getPresignedUrlForPhoto(photoId: string, verb: 'GET' | 'PUT', adminKey?: string): Observable<string>
   {
-    return this.http.get<string>(`${this.apiUrl}/presigned/${verb}/${photoId}`);
+    const headers: Record<string, string> = {};
+
+    if(verb == 'PUT' && adminKey)
+    {
+      headers['X-Admin-Key'] = adminKey;
+    }
+    return this.http.get<string>(`${this.apiUrl}/presigned/${verb}/${photoId}`,{headers,});
   }
 
 }

@@ -37,10 +37,10 @@ export class AdminComponent {
 
     if (file) {
       this.photoService
-        .getPresignedUrlForPhoto(file.name, 'PUT')
+        .getPresignedUrlForPhoto(file.name, 'PUT', this.adminKey())
         .pipe(
           switchMap((url) =>
-            this.http.put(url, file, { headers: { 'X-Admin-Key': this.adminKey() } }),
+            this.http.put(url, file),
           ),
         )
         .subscribe({
