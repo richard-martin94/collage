@@ -2,25 +2,22 @@ import { Component, OnInit, signal, inject } from '@angular/core';
 import { Photo } from '../Models/photo.model';
 import { delay, switchMap, forkJoin, map } from 'rxjs';
 import { PhotoService } from '../Services/photo.service';
-import { InfiniteComponent } from './infinite.component';
 
 @Component({
   selector: 'app-photo',
   standalone: true,
-  templateUrl: './photo.component.html',
-  styleUrls: ['./photo.component.css'],
+  templateUrl: './photo.component.oldhtml',
+  styleUrls: ['./photo.component.old'],
 })
 
 export class PhotoComponent implements OnInit {
   photos = signal<Photo[]>([]);
   isLoading = signal<boolean>(false);
-  errorMessage = signal<string>('');/*
-  private infinite = inject(InfiniteComponent);*/
+  errorMessage = signal<string>('');
 
   constructor(private photoService: PhotoService) {}
 
-  ngOnInit() {/*
-    this.infinite.getPhotos();*/
+  ngOnInit() {
     this.getPhotos();
   }
 

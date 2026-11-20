@@ -8,107 +8,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c0ab424-864d-4591-a848-805d12906f52" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../collageApp/src/app/Components/infinite.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.collageApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.collageApi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/Endpoints/PhotoEndpoints.cs" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/Endpoints/PhotoEndpoints.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/AWSSDK.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/AWSSDK.Core.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/AWSSDK.DynamoDBv2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/AWSSDK.DynamoDBv2.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/AWSSDK.Extensions.NETCore.Setup.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/AWSSDK.Extensions.NETCore.Setup.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/AWSSDK.S3.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/AWSSDK.S3.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/AWSSDK.SQS.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/AWSSDK.SQS.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/Microsoft.AspNetCore.OpenApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/Microsoft.AspNetCore.OpenApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/Microsoft.OpenApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/Microsoft.OpenApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/Microsoft.Testing.Extensions.MSBuild.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/Microsoft.Testing.Extensions.MSBuild.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/Microsoft.Testing.Extensions.Telemetry.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/Microsoft.Testing.Extensions.Telemetry.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/Microsoft.Testing.Extensions.TrxReport.Abstractions.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/Microsoft.Testing.Extensions.TrxReport.Abstractions.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/Microsoft.Testing.Platform.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/Microsoft.Testing.Platform.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/Scalar.AspNetCore.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/Scalar.AspNetCore.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/collageApi.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/collageApi.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/collageApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/collageApi.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/collageApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/collageApi.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/cs/Microsoft.Testing.Extensions.MSBuild.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/cs/Microsoft.Testing.Extensions.MSBuild.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/cs/Microsoft.Testing.Extensions.Telemetry.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/cs/Microsoft.Testing.Extensions.Telemetry.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/cs/Microsoft.Testing.Platform.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/cs/Microsoft.Testing.Platform.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/de/Microsoft.Testing.Extensions.MSBuild.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/de/Microsoft.Testing.Extensions.MSBuild.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/de/Microsoft.Testing.Extensions.Telemetry.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/de/Microsoft.Testing.Extensions.Telemetry.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/de/Microsoft.Testing.Platform.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/de/Microsoft.Testing.Platform.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/es/Microsoft.Testing.Extensions.MSBuild.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/es/Microsoft.Testing.Extensions.MSBuild.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/es/Microsoft.Testing.Extensions.Telemetry.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/es/Microsoft.Testing.Extensions.Telemetry.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/es/Microsoft.Testing.Platform.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/es/Microsoft.Testing.Platform.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/fr/Microsoft.Testing.Extensions.MSBuild.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/fr/Microsoft.Testing.Extensions.MSBuild.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/fr/Microsoft.Testing.Extensions.Telemetry.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/fr/Microsoft.Testing.Extensions.Telemetry.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/fr/Microsoft.Testing.Platform.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/fr/Microsoft.Testing.Platform.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/it/Microsoft.Testing.Extensions.MSBuild.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/it/Microsoft.Testing.Extensions.MSBuild.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/it/Microsoft.Testing.Extensions.Telemetry.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/it/Microsoft.Testing.Extensions.Telemetry.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/it/Microsoft.Testing.Platform.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/it/Microsoft.Testing.Platform.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/ja/Microsoft.Testing.Extensions.MSBuild.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/ja/Microsoft.Testing.Extensions.MSBuild.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/ja/Microsoft.Testing.Extensions.Telemetry.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/ja/Microsoft.Testing.Extensions.Telemetry.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/ja/Microsoft.Testing.Platform.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/ja/Microsoft.Testing.Platform.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/ko/Microsoft.Testing.Extensions.MSBuild.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/ko/Microsoft.Testing.Extensions.MSBuild.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/ko/Microsoft.Testing.Extensions.Telemetry.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/ko/Microsoft.Testing.Extensions.Telemetry.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/ko/Microsoft.Testing.Platform.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/ko/Microsoft.Testing.Platform.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/pl/Microsoft.Testing.Extensions.MSBuild.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/pl/Microsoft.Testing.Extensions.MSBuild.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/pl/Microsoft.Testing.Extensions.Telemetry.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/pl/Microsoft.Testing.Extensions.Telemetry.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/pl/Microsoft.Testing.Platform.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/pl/Microsoft.Testing.Platform.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/pt-BR/Microsoft.Testing.Extensions.MSBuild.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/pt-BR/Microsoft.Testing.Extensions.MSBuild.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/pt-BR/Microsoft.Testing.Extensions.Telemetry.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/pt-BR/Microsoft.Testing.Extensions.Telemetry.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/pt-BR/Microsoft.Testing.Platform.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/pt-BR/Microsoft.Testing.Platform.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/ru/Microsoft.Testing.Extensions.MSBuild.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/ru/Microsoft.Testing.Extensions.MSBuild.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/ru/Microsoft.Testing.Extensions.Telemetry.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/ru/Microsoft.Testing.Extensions.Telemetry.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/ru/Microsoft.Testing.Platform.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/ru/Microsoft.Testing.Platform.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/tr/Microsoft.Testing.Extensions.MSBuild.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/tr/Microsoft.Testing.Extensions.MSBuild.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/tr/Microsoft.Testing.Extensions.Telemetry.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/tr/Microsoft.Testing.Extensions.Telemetry.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/tr/Microsoft.Testing.Platform.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/tr/Microsoft.Testing.Platform.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/xunit.v3.assert.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/xunit.v3.assert.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/xunit.v3.common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/xunit.v3.common.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/xunit.v3.core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/xunit.v3.core.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/xunit.v3.mtp-v2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/xunit.v3.mtp-v2.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/xunit.v3.runner.common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/xunit.v3.runner.common.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/xunit.v3.runner.inproc.console.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/xunit.v3.runner.inproc.console.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/xunit.v3.runner.utility.netcore.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/xunit.v3.runner.utility.netcore.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/zh-Hans/Microsoft.Testing.Extensions.MSBuild.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/zh-Hans/Microsoft.Testing.Extensions.MSBuild.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/zh-Hans/Microsoft.Testing.Extensions.Telemetry.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/zh-Hans/Microsoft.Testing.Extensions.Telemetry.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/zh-Hans/Microsoft.Testing.Platform.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/zh-Hans/Microsoft.Testing.Platform.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/zh-Hant/Microsoft.Testing.Extensions.MSBuild.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/zh-Hant/Microsoft.Testing.Extensions.MSBuild.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/zh-Hant/Microsoft.Testing.Extensions.Telemetry.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/zh-Hant/Microsoft.Testing.Extensions.Telemetry.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/zh-Hant/Microsoft.Testing.Platform.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/bin/Debug/net10.0/zh-Hant/Microsoft.Testing.Platform.resources.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/collageApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/collageApi.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.genautoregisteredextensionsinputcache.cache" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.genautoregisteredextensionsinputcache.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.xUnit.v3.EntryPoint.cache" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/collageApi.xUnit.v3.EntryPoint.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/ref/collageApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/ref/collageApi.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/refint/collageApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/refint/collageApi.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/rjsmrazor.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/Debug/net10.0/rjsmrazor.dswa.cache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/collageApi.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/collageApi.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/collageApi.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/collageApi.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/collageApi.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/collageApi.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collageApi/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/collageApi/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../collageApp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../collageApp/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../collageApp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../collageApp/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../collageApp/src/app/Components/admin.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../collageApp/src/app/Components/admin.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../collageApp/src/app/Components/photo.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../collageApp/src/app/Components/photo.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../collageApp/src/app/Components/photo.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../collageApp/src/app/Components/photo.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../collageApp/src/app/Components/photo.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../collageApp/src/app/Components/photo.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../collageApp/src/app/Services/photo.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../collageApp/src/app/Services/photo.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../collageApp/src/app/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/../collageApp/src/app/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../collageApp/src/app/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/../collageApp/src/app/app.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../collageApp/src/app/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../collageApp/src/app/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../collageApp/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../collageApp/src/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../collageApp/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../collageApp/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../localstack-data/cache/license.json" beforeDir="false" afterPath="$PROJECT_DIR$/../localstack-data/cache/license.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../localstack-data/cache/server.test.pem" beforeDir="false" afterPath="$PROJECT_DIR$/../localstack-data/cache/server.test.pem" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../localstack-data/cache/server.test.pem.crt" beforeDir="false" afterPath="$PROJECT_DIR$/../localstack-data/cache/server.test.pem.crt" afterDir="false" />
@@ -149,23 +63,23 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.6920038136388722" />
-      <entry key="MS500" value="3.145723434141955" />
-      <entry key="S2" value="4.87251835339787" />
-      <entry key="S5" value="9.204272270430087" />
-      <entry key="S10" value="13.475896895703311" />
-      <entry key="S30" value="18.450120424221915" />
-      <entry key="S60" value="20.115005851168906" />
-      <entry key="M2" value="21.03135784869251" />
-      <entry key="M5" value="21.706145892676012" />
-      <entry key="M10" value="22.120506008996458" />
-      <entry key="M15" value="22.33451381179675" />
-      <entry key="M30" value="22.617146428878332" />
-      <entry key="H1" value="22.79356699636036" />
-      <entry key="H2" value="22.892668209531813" />
-      <entry key="H4" value="22.945255947573518" />
-      <entry key="D1" value="22.990721866344185" />
-      <entry key="W1" value="22.998670719370228" />
+      <entry key="MS100" value="2.3165904545799325" />
+      <entry key="MS500" value="5.716031134039006" />
+      <entry key="S2" value="13.751924166203178" />
+      <entry key="S5" value="21.84449923592052" />
+      <entry key="S10" value="28.51749590558711" />
+      <entry key="S30" value="36.29971976624117" />
+      <entry key="S60" value="38.95553634137437" />
+      <entry key="M2" value="40.42832879219914" />
+      <entry key="M5" value="41.45827228098131" />
+      <entry key="M10" value="41.994699145438254" />
+      <entry key="M15" value="42.250025101695044" />
+      <entry key="M30" value="42.57450207087401" />
+      <entry key="H1" value="42.77212146951411" />
+      <entry key="H2" value="42.881910986912594" />
+      <entry key="H4" value="42.93986821635269" />
+      <entry key="D1" value="42.989822598947306" />
+      <entry key="W1" value="42.99854221985129" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -187,23 +101,23 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.601471794006481" />
-      <entry key="MS500" value="3.1147507133349324" />
-      <entry key="S2" value="4.858206079091503" />
-      <entry key="S5" value="9.172742413806443" />
-      <entry key="S10" value="13.428964794034995" />
-      <entry key="S30" value="18.414901931667757" />
-      <entry key="S60" value="20.093293583325902" />
-      <entry key="M2" value="21.0192912348911" />
-      <entry key="M5" value="21.70097123460588" />
-      <entry key="M10" value="22.11782888769674" />
-      <entry key="M15" value="22.332700922106127" />
-      <entry key="M30" value="22.616222234779862" />
-      <entry key="H1" value="22.7930995232901" />
-      <entry key="H2" value="22.892432983547355" />
-      <entry key="H4" value="22.945137941949362" />
-      <entry key="D1" value="22.990702142381092" />
-      <entry key="W1" value="22.998667900256414" />
+      <entry key="MS100" value="2.1813473157621823" />
+      <entry key="MS500" value="5.630384607506394" />
+      <entry key="S2" value="13.690602606843019" />
+      <entry key="S5" value="21.7926419164074" />
+      <entry key="S10" value="28.462140296301055" />
+      <entry key="S30" value="36.26048639993269" />
+      <entry key="S60" value="38.931238889104435" />
+      <entry key="M2" value="40.41476397643771" />
+      <entry key="M5" value="41.452439474829625" />
+      <entry key="M10" value="41.99168226769542" />
+      <entry key="M15" value="42.24798324369926" />
+      <entry key="M30" value="42.573462126615794" />
+      <entry key="H1" value="42.77159579635748" />
+      <entry key="H2" value="42.88164657830625" />
+      <entry key="H4" value="42.939735598586225" />
+      <entry key="D1" value="42.989800436717" />
+      <entry key="W1" value="42.99853905234211" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -218,27 +132,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.collageApi: http.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "cidr.known.project.marker": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.jetbrains.opentelemetry.toolwindow.stripe.promo": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/richard/Projects/collage",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "rider.unittesting.toolwindow.stripe.button.shown": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.collageApi: http.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.jetbrains.opentelemetry.toolwindow.stripe.promo&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/richard/Projects/collage&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;rider.unittesting.toolwindow.stripe.button.shown&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.collageApi: http">
     <configuration name="collageApi: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/collageApi/collageApi.csproj" />

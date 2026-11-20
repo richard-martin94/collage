@@ -132,10 +132,25 @@
   </svg>
 </div>
 
-<div class="galleryButton">
-  <button routerLink="/photos">Gallery</button>
+<div class="app-content">
+  <div class="hero-spacer"></div>
+  <div [ngClass]="{'gallery-empty': galleryItems().length === 0, 'galleryRow': galleryItems().length > 0 }">
+    @for (item of galleryItems(); track item.id) {
+      <div class="galleryColumn">
+        <img alt="" src="{{ item.imageUrl }}" />
+      </div>
+    }
+  </div>
+  @if(isLoading())
+  {
+  <div class="status">
+    <p class="loading">Loading photos...</p>
+  </div>
+  }@else{
+    <div class="status">
+      <p #status>{{ done() ? "That's everything!" : 'Keep scrolling to see the gallery!' }}</p>
+    </div>
+  }
 </div>
-
-
 
 <router-outlet />

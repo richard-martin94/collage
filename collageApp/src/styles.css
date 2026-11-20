@@ -39,11 +39,10 @@ body {
   object-fit: cover;
 }
 
-/*.app-content {
+.app-content {
   position: relative;
   z-index: 1;
-}*/
-
+}
 
 @media (max-width: 700px) {
   .videoMask {
