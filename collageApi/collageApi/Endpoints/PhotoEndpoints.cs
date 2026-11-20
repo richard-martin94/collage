@@ -69,9 +69,9 @@ public static class PhotoEndpoints
                 : TypedResults.Ok(urlResponse);
         });
 
-        collageApi.MapDelete("/{photoId}", async (IPhotoService service, Guid photoId) =>
+        /*collageApi.MapDelete("/{photoId}", async (IPhotoService service, Guid photoId) =>
         {
             throw new NotImplementedException();
-        });
+        });*/
     }
 }

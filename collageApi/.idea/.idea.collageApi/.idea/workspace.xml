@@ -7,17 +7,7 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c0ab424-864d-4591-a848-805d12906f52" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../collageApp/src/app/Components/admin.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../collageApp/src/app/Components/admin.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../collageApp/src/app/Components/photo.component.oldcss" beforeDir="false" afterPath="$PROJECT_DIR$/../collageApp/src/app/Components/photo.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../collageApp/src/app/Components/photo.component.oldhtml" beforeDir="false" afterPath="$PROJECT_DIR$/../collageApp/src/app/Components/photo.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../collageApp/src/app/Components/photo.component.oldts" beforeDir="false" afterPath="$PROJECT_DIR$/../collageApp/src/app/Components/photo.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../collageApp/src/app/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/../collageApp/src/app/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../collageApp/src/app/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/../collageApp/src/app/app.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../collageApp/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../collageApp/src/app/app.routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../collageApp/src/app/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../collageApp/src/app/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../collageApp/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../collageApp/src/styles.css" afterDir="false" />
-    </list>
+    <list default="true" id="2c0ab424-864d-4591-a848-805d12906f52" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
